@@ -1,7 +1,7 @@
 #!/bin/bash
 
 add_line_with_sudo() {
-    echo "$1" | sudo tee -a /etc/pacman.conf > /dev/null
+     sudo sed -i "30a$1" /etc/pacman.conf
 }
 
 #### Check for yay ####
@@ -57,7 +57,7 @@ if [[ $choice == [Yy] ]]; then
     add_line_with_sudo "ParallelDownloads = 10"
 
     # Add color to pacman.conf
-    add_line_with_sudo "color"
+    add_line_with_sudo "Color"
 
     # Add ILoveCandy to pacman.conf
     add_line_with_sudo "ILoveCandy"
