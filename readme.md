@@ -63,8 +63,8 @@ Keybindings
 
 Screenshots
 -----------
-![Screenshot1](https://raw.githubusercontent.com/s-rs/DotFiles/main/docs/desktop.png)
-![Screenshot2](https://raw.githubusercontent.com/s-rs/DotFiles/main/docs/desktop2.png)
+![Screenshot1](https://raw.githubusercontent.com/s-rs/dotfiles/master/docs/desktop.png)
+![Screenshot2](https://raw.githubusercontent.com/s-rs/dotfiles/master/docs/desktop2.png)
 
 
 
