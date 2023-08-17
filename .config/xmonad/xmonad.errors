@@ -1,7 +1,0 @@
-$ ghc --make xmonad.hs -i -ilib -fforce-recomp -main-is main -dynamic -v0 -outputdir /home/subhashis/.xmonad/build-x86_64-linux -o /home/subhashis/.xmonad/xmonad-x86_64-linux
-
-xmonad.hs:509:1: error:
-    parse error (possibly incorrect indentation or mismatched brackets)
-    |
-509 | ]
-    | ^
