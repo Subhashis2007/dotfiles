@@ -500,9 +500,10 @@ myKeys c =
   , ("<XF86AudioLowerVolume>", addName "Lower vol"    $ spawn "amixer set Master 5%- unmute")
   , ("<XF86AudioRaiseVolume>", addName "Raise vol"    $ spawn "amixer set Master 5%+ unmute")
   , ("S-<Print>", addName "Take screenshot " $ spawn "flameshot screen")
+  , ("C-<Print>", addName "start screenrecorder " $ spawn "simplescreenrecorder --start-hidden")
   , ("<Print>", addName "Take screenshot " $ spawn "flameshot gui")
   , ("M-x", addName "spawn logout screen" $ spawn "wlogout")
-  , ("M-r", addName "spawn rofi drun" $ spawn "rofi -show drun")
+  , ("M-p", addName "spawn rofi drun" $ spawn "rofi -show drun")
   ]
 
 
