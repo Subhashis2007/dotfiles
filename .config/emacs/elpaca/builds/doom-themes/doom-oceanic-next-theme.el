@@ -1,0 +1,1 @@
+/home/subhashis/.config/emacs/elpaca/repos/themes/themes/doom-oceanic-next-theme.el

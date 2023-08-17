@@ -1,0 +1,330 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background = #24273a
+background-alt = #373B41
+foreground = #C5C8C6
+primary = #8aadf4
+secondary = #8ABEB7
+alert = #A54242
+disabled = #707880
+
+[bar/polybar-xmonad]
+width = 100%
+height = 22pt
+radius = 14px
+monitor-strict = false
+override-redirect = false
+wm-restack = generic
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3pt
+line-color = #f00
+border-size = 4pt
+border-color = #00000000
+
+padding-left = 0
+padding-right = 1
+padding-top = 20
+module-margin = 1
+
+separator = |
+separator-foreground = ${colors.disabled}
+
+font-0 = "Ubuntu:style=Bold:size=9;2"
+font-1 = "UbuntuMono Nerd Font:style=Bold:size=18;3"
+font-2 = "Font Awesome 6 Free:style=Regular:pixelsize=8;1"
+font-3 = "Font Awesome 6 Free:style=Solid:pixelsize=8;1"
+font-4 = "Font Awesome 6 Brands:pixelsize=8;1"
+
+modules-left = ewmh xwindow
+modules-center =
+modules-right = kernel cpu2 memory2 filesystem uptime arch-aur-updates pavolume date
+
+tray-offset-x = -13
+tray-offset-y = 0  
+tray-padding =  0
+tray-maxsize = 20
+tray-scale = 1.0
+tray-position = right
+tray-background = ${colors.background}
+
+
+[module/systray]
+type = internal/tray
+
+format-margin = 8pt
+tray-spacing = 16pt
+radium = 9
+
+[module/kernel]
+type = custom/script
+exec = uname -r
+tail = false
+interval = 1024
+format-prefix = " 🤖 "
+format-prefix-foreground = ${colors.color2}
+format-foreground = ${colors.color2}
+format-background = ${colors.background}
+format-underline = ${colors.color2}
+format-margin = 1
+format-padding = 0
+
+[module/cpu2]
+;https://github.com/jaagr/polybar/wiki/Module:-cpu
+type = internal/cpu
+; Seconds to sleep between updates
+; Default: 1
+interval = 1
+format-prefix = "💻 "
+format-prefix-foreground = ${colors.color4}
+
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label>
+format-foreground = ${colors.color4}
+format-background = ${colors.background}
+format-underline = ${colors.color4}
+format-margin = 2
+format-padding = 0
+label-font = 1
+
+
+; Available tokens:
+;   %percentage% (default) - total cpu load
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label = Cpu %percentage:3%%
+
+[module/xwindow]
+;https://github.com/jaagr/polybar/wiki/Module:-xwindow
+type = internal/xwindow
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 50
+
+format-prefix = "*  "
+format-suffix = "  *"
+format-foreground = ${colors.color10}
+format-background = ${colors.background}
+format-margin = 2
+format-padding = 0
+
+[module/memory2]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+label = %percentage_used%%
+label-active-font = 2
+
+format = Mem <label>
+format-prefix = "💾 "
+format-prefix-foreground = ${colors.color11}
+format-foreground = ${colors.color11}
+format-background = ${colors.background}
+format-underline = ${colors.color11}
+format-margin = 2
+format-padding = 0
+
+[module/filesystem]
+;https://github.com/jaagr/polybar/wiki/Module:-filesystem
+type = internal/fs
+; Mountpoints to display
+mount-0 = /
+;mount-1 = /home
+;mount-2 = /var
+;
+; Seconds to sleep between updates. Default: 30
+interval = 30
+; Display fixed precision values. Default: false
+fixed-values = false
+; Spacing between entries. Default: 2
+spacing = 4
+
+; Available tags:
+;   <label-mounted> (default)
+;   <bar-free>
+;   <bar-used>
+;   <ramp-capacity>
+format-mounted = <label-mounted>
+format-mounted-foreground = ${colors.color1}
+format-mounted-background = ${colors.background}
+format-mounted-underline = ${colors.color1}
+format-mounted-margin = 2
+format-mounted-padding = 0
+
+; Available tokens:
+;   %mountpoint%
+;   %type%
+;   %fsname%
+;   %percentage_free%
+;   %percentage_used%
+;   %total%
+;   %free%
+;   %used%
+; Default: %mountpoint% %percentage_free%%
+label-mounted = hdd: %free% free
+
+; Available tokens:
+;   %mountpoint%
+; Default: %mountpoint% is not mounted
+label-unmounted = %mountpoint% not mounted
+format-unmounted-foreground = ${colors.foreground}
+format-unmounted-background = ${colors.background}
+;format-unmounted-underline = ${colors.alert}
+
+
+[module/uptime]
+;https://github.com/jaagr/polybar/wiki/User-contributed-modules#uptime
+type = custom/script
+exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
+interval = 100
+label = Uptime : %output%
+
+format-foreground = ${colors.color13}
+format-background = ${colors.background}
+format-prefix = "💻 "
+format-prefix-foreground = ${colors.color13}
+format-underline = ${colors.color13}
+format-margin = 2
+format-padding = 0
+
+[module/arch-aur-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-all-updates.sh
+interval = 1000
+label = Updates: %output%
+format-prefix = "🗘 "
+format-prefix-foreground = ${colors.color2}
+format-foreground = ${colors.color2}
+format-background = ${colors.background}
+format-underline = ${colors.color2}
+format-margin = 2
+format-padding = 0
+
+[module/pavolume]
+type = custom/script
+tail = true
+label = %output%
+format-prefix = "Vol:"
+format-prefix-foreground = ${colors.color5}
+exec = ~/.config/polybar/scripts/pavolume.sh --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
+scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+format-foreground = ${colors.color5}
+format-background = ${colors.background}
+format-underline = ${colors.color5}
+format-margin = 2
+format-padding = 0
+
+[module/date]
+;https://github.com/jaagr/polybar/wiki/Module:-date
+type = internal/date
+; Seconds to sleep between updates
+interval = 5
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = " %a %b %d, %Y"
+date-alt = " %a %b %d, %Y"
+time = %l:%M%p
+time-alt = %l:%M%p
+format-prefix = "📅 "
+format-prefix-foreground = ${colors.color4}
+format-foreground = ${colors.color4}
+format-background = ${colors.background}
+format-underline = ${colors.color4}
+format-margin = 2
+format-padding = 0
+label = "%date% %time% "
+
+
+[module/ewmh]
+type = internal/xworkspaces
+
+pin-workspaces = true
+enable-click = true
+enable-scroll = false
+reverse-scroll = true
+
+;extra icons to choose from
+;http://fontawesome.io/cheatsheet/
+;       v     
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-5 = 6;
+icon-6 = 7;
+icon-7 = 8;
+#icon-8 = 9;
+#icon-9 = 10;
+#icon-default = " "
+format = <label-state>
+label-monitor = %name%
+
+label-active = %name%
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.background}
+label-active-padding = 1
+label-active-underline = ${colors.foreground}
+label-active-margin = 2
+
+label-occupied = %name%
+label-occupied-background = ${colors.background}
+label-occupied-padding = 1
+label-occupied-underline = ${colors.primary}
+label-occupied-margin = 2
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.alert}
+label-urgent-underline = ${colors.alert}
+label-urgent-padding = 1
+label-urgent-margin = 2
+
+label-empty = %name%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 1
+label-empty-margin = 2
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+; vim:ft=dosini

@@ -1,0 +1,1 @@
+("~/git/dotfiles/" "~/git/ytbrv/" "~/git/revanced-nonroot/" "~/git/appx/" "~/git/hyprland/" "~/git/arcolinux-xmonad-polybar/")

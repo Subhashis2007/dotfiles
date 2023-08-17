@@ -1,0 +1,1 @@
+/home/subhashis/.config/emacs/elpaca/repos/themes/.dir-locals.el
