@@ -430,7 +430,7 @@ myKeys c =
   , ("S-<Print>", addName "Take screenshot " $ spawn "flameshot screen")
   , ("<Print>", addName "Take screenshot " $ spawn "flameshot gui")
   , ("M-x", addName "spawn logout screen" $ spawn "wlogout")
-  , ("M-p", addName "spawn logout screen" $ spawn "rofi -show drun")
+  , ("M-r", addName "spawn rofi drun" $ spawn "rofi -show drun")
   ]
 
 main :: IO ()
