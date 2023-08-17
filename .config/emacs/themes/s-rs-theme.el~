@@ -13,11 +13,11 @@
    '(region ((t (:background "#bb089f" ))))
    '(secondary-selection ((t (:background "#ff74fb" ))))
    '(font-lock-builtin-face ((t (:foreground "#ffb400" ))))
-   '(font-lock-comment-face ((t (:foreground "#d7afaf" ))))
-   '(font-lock-function-name-face ((t (:foreground "#af87ff" ))))
-   '(font-lock-keyword-face ((t (:foreground "#00ffff" ))))
+   '(font-lock-comment-face ((t (:foreground "#7c6f64" ))))
+   '(font-lock-function-name-face ((t (:foreground "#b8bb26" ))))
+   '(font-lock-keyword-face ((t (:foreground "#bb34fb" ))))
    '(font-lock-string-face ((t (:foreground "#64f7b0" ))))
-   '(font-lock-type-face ((t (:foreground "#ff5f00" ))))
+   '(font-lock-type-face ((t (:foreground "#009aff" ))))
    '(font-lock-constant-face ((t (:foreground "#90d3ff" ))))
    '(font-lock-variable-name-face ((t (:foreground "#32ff02" ))))
    '(minibuffer-prompt ((t (:foreground "#b8bb26" :bold t ))))
@@ -35,4 +35,3 @@
 (provide-theme 's-rs)
 
 ;;; s-rs-theme.el ends here
- 
