@@ -1,5 +1,8 @@
 #!/bin/bash
 
+add_line_with_sudo() {
+    echo "$1" | sudo tee -a /etc/pacman.conf > /dev/null
+}
 
 #### Check for yay ####
 ISYAY=/sbin/yay
@@ -47,6 +50,22 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     
   fi
 
+# Prompt for confirmation
+read -p "Do you want to add recommended tweaks in pacman.conf? (y/n): " choice
+if [[ $choice == [Yy] ]]; then
+    # Add ParallelDownloads = 10 to pacman.conf
+    add_line_with_sudo "ParallelDownloads = 10"
+
+    # Add color to pacman.conf
+    add_line_with_sudo "color"
+
+    # Add ILoveCandy to pacman.conf
+    add_line_with_sudo "ILoveCandy"
+
+    echo "Pacman tweaks successful."
+else
+    echo "Operation cancelled."
+fi
 
 read -n1 -rep 'Would you like enable sddm now? (y,n)' HYP
 if [[ $HYP == "Y" || $HYP == "y" ]]; then
