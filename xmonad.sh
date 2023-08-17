@@ -42,6 +42,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
    
    mkdir ~/.config/
    cp -r .config ~/.config/
+   cp .bashrc ~/
+  
     
   fi
 
