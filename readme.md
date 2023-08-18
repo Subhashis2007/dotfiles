@@ -16,7 +16,7 @@ User apps
 ---------
 
 ```
-brave-bin pcmanfm ntfs-3g gvfs mtpfs   emacs android-tools pulseaudio-equalizer-ladspa wlogout expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad  nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc gnome-disk-utility gparted 
+brave-bin pcmanfm ntfs-3g gvfs mtpfs gvfs-mtp emacs android-tools pulseaudio-equalizer-ladspa wlogout expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad  nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc gnome-disk-utility gparted 
 
 ```
 

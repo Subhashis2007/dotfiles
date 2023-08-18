@@ -25,7 +25,7 @@ fi
 read -n1 -rep 'Would you like to install the user packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -S --noconfirm --disable-download-timeout brave-bin pcmanfm ntfs-3g \
-    gvfs mtpfs \
+    gvfs mtpfs gvfs-mtp \
     emacs android-tools pulseaudio-equalizer-ladspa wlogout \
     expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad \
     nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc \
