@@ -101,7 +101,7 @@ myTerminal :: String
 myTerminal = "kitty"    -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "firefox"  -- Sets defualt browser
+myBrowser = "brave"  -- Sets defualt browser
 
 myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
@@ -420,7 +420,7 @@ myKeys c =
  
   -- Emacs (SUPER-e followed by a key)
   ^++^ subKeys "Emacs"
-  [("M-e", addName "Emacsclient"               $ spawn (myEmacs))]
+  [("M-e", addName "spawn emacs"               $ spawn (myEmacs))]
 
  -- Multimedia Keys
   ^++^ subKeys "Multimedia keys"

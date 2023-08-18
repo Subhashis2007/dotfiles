@@ -56,7 +56,7 @@ Keybindings
 | MOD + Left  Arrow          |   Switch window focus to previous window                 |
 | MOD + SPACE                |   Toggle fullscreen mode off/on                          |
 | MOD + e                    |   Launches Emacsclient                                   |
-| MOD + b                    |   Opens default browser(firefox)                         |
+| MOD + b                    |   Opens default browser(brave)                           |
 | MOD + x                    |   Opens logout screen(wlogout)                           |
 
 ```
