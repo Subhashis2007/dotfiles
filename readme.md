@@ -9,21 +9,21 @@ Base
 these are the apps which do the formation of the basic structure or skeleton of desktop
 
 ```
-xorg picom xmonad xmonad-contrib sddm polybar conky dmenu rofi gtk2 gtk3 gtk4
+xorg picom xmonad xmonad-contrib sddm polybar conky dmenu rofi gtk2 gtk3 gtk4 network-manager-applet
 ```
 
 User apps
 ---------
 
 ```
-brave-bin pcmanfm ntfs-3g gvfs mtpfs alsamixer pulseaudio pulseaudio-alsa pavucontrol emacs android-tools pulseaudio-equalizer-ladspa wlogout expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad
+brave-bin pcmanfm ntfs-3g gvfs mtpfs alsamixer pulseaudio pulseaudio-alsa pavucontrol emacs android-tools pulseaudio-equalizer-ladspa wlogout expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad  nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc
 
 ```
 
 Fonts & Theming
 ------
 ``` 
-noto-fonts ttf-font-awesome ttf-jetbrains-mono ttf-ubuntu-font-family lxappearance kvantummanager qt5ct qt6ct
+noto-fonts ttf-font-awesome ttf-jetbrains-mono ttf-ubuntu-font-family lxappearance kvantummanager qt5ct qt6ct breeze-icons catppuccin-gtk-theme-macchiato kvantum-theme-catppuccin-git
 ```
 
 Dependencies
@@ -58,6 +58,8 @@ Keybindings
 | MOD + e                    |   Launches Emacsclient                                   |
 | MOD + b                    |   Opens default browser(brave)                           |
 | MOD + x                    |   Opens logout screen(wlogout)                           |
+| Print                      |   Take a screenshot                                      |
+
 
 ```
 
