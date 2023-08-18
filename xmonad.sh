@@ -29,7 +29,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     alsamixer pulseaudio pulseaudio-alsa pavucontrol \
     emacs android-tools pulseaudio-equalizer-ladspa wlogout \
     expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad \
-    nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc 
+    nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc \
+    gnome-disk-utility gparted 
  fi  
 
 read -n1 -rep 'Would you like to install the fonts and theming packages? (y,n)' INST
