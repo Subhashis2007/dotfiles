@@ -19,7 +19,8 @@ read -n1 -rep 'Would you like to install the base packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -S --noconfirm --disable-download-timeout xorg picom xmonad xmonad-contrib \
     sddm polybar conky dmenu network-manager-applet\
-    rofi gtk2 gtk3 gtk4  alsamixer pulseaudio pulseaudio-alsa pavucontrol alsa-utils
+    rofi gtk2 gtk3 gtk4  alsamixer pulseaudio pulseaudio-alsa \
+    pavucontrol alsa-utils alsa-plugins
 fi
 
 read -n1 -rep 'Would you like to install the user packages? (y,n)' INST

@@ -9,7 +9,7 @@ Base
 these are the apps which do the formation of the basic structure or skeleton of desktop
 
 ```
-xorg picom xmonad xmonad-contrib sddm polybar conky dmenu rofi gtk2 gtk3 gtk4 network-manager-applet alsamixer alsa-utils pulseaudio pulseaudio-alsa pavucontrol 
+xorg picom xmonad xmonad-contrib sddm polybar conky dmenu rofi gtk2 gtk3 gtk4 network-manager-applet alsamixer alsa-utils alsa-plugins pulseaudio pulseaudio-alsa pavucontrol  
 ```
 
 User apps
