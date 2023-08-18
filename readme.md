@@ -9,14 +9,14 @@ Base
 these are the apps which do the formation of the basic structure or skeleton of desktop
 
 ```
-xorg picom xmonad xmonad-contrib sddm polybar conky dmenu rofi gtk2 gtk3 gtk4 network-manager-applet
+xorg picom xmonad xmonad-contrib sddm polybar conky dmenu rofi gtk2 gtk3 gtk4 network-manager-applet alsamixer pamixer pulseaudio pulseaudio-alsa pavucontrol 
 ```
 
 User apps
 ---------
 
 ```
-brave-bin pcmanfm ntfs-3g gvfs mtpfs alsamixer pulseaudio pulseaudio-alsa pavucontrol emacs android-tools pulseaudio-equalizer-ladspa wlogout expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad  nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc gnome-disk-utility gparted 
+brave-bin pcmanfm ntfs-3g gvfs mtpfs   emacs android-tools pulseaudio-equalizer-ladspa wlogout expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad  nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc gnome-disk-utility gparted 
 
 ```
 

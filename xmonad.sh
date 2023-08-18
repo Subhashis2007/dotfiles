@@ -19,14 +19,13 @@ read -n1 -rep 'Would you like to install the base packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -S --noconfirm --disable-download-timeout xorg picom xmonad xmonad-contrib \
     sddm polybar conky dmenu network-manager-applet\
-    rofi gtk2 gtk3 gtk4 
+    rofi gtk2 gtk3 gtk4 pamixer alsamixer pulseaudio pulseaudio-alsa pavucontrol
 fi
 
 read -n1 -rep 'Would you like to install the user packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -S --noconfirm --disable-download-timeout brave-bin pcmanfm ntfs-3g \
     gvfs mtpfs \
-    alsamixer pulseaudio pulseaudio-alsa pavucontrol \
     emacs android-tools pulseaudio-equalizer-ladspa wlogout \
     expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad \
     nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc \
