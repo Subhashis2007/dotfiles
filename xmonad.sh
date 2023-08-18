@@ -18,7 +18,7 @@ fi
 read -n1 -rep 'Would you like to install the base packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -S --noconfirm --disable-download-timeout xorg picom xmonad xmonad-contrib \
-    sddm polybar conky dmenu \
+    sddm polybar conky dmenu network-manager-applet\
     rofi gtk2 gtk3 gtk4 
 fi
 
@@ -28,7 +28,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     gvfs mtpfs \
     alsamixer pulseaudio pulseaudio-alsa pavucontrol \
     emacs android-tools pulseaudio-equalizer-ladspa wlogout \
-    expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad
+    expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad \
+    nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc 
  fi  
 
 read -n1 -rep 'Would you like to install the fonts and theming packages? (y,n)' INST
@@ -36,16 +37,16 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -S --noconfirm --disable-download-timeout noto-fonts \
     ttf-font-awesome ttf-jetbrains-mono \
     ttf-ubuntu-font-family \
-    lxappearance kvantummanager qt5ct qt6ct
+    lxappearance kvantummanager qt5ct qt6ct \
+    breeze-icons catppuccin-gtk-theme-macchiato kvantum-theme-catppuccin-git
 fi
 
 read -n1 -rep 'Would you like to copy config files? (y,n)' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "Copying config files...\n"
    
-   mkdir ~/.config/
-   cp -r .config ~/.config/
-   cp .bashrc ~/
+   cp -r .config ~/
+   cp -f .bashrc ~/
   
     
   fi
