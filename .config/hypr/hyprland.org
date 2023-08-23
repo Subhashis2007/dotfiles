@@ -1,0 +1,238 @@
+#+TITLE: Subhashis's Hyprland configuration
+#+AUTHOR: Subhashis Barad
+#+PROPERTY: header-args :tangle hyprland.conf
+#+auto_tangle: t
+#+STARTUP: showeverything
+
+
+* Table of Contents :toc:
+- [[#basic-system-configuration][Basic system configuration]]
+  - [[#monitor-configuration][Monitor Configuration]]
+  - [[#variables][Variables]]
+  - [[#cursor-size][Cursor size]]
+  - [[#misc-system-configs][Misc system configs]]
+- [[#startup-hook][Startup Hook]]
+- [[#decorations-and-animations][Decorations and animations]]
+- [[#window-rules][Window Rules]]
+- [[#keybindings][KeyBindings]]
+  - [[#userapps][Userapps]]
+  - [[#navigation][Navigation]]
+
+* Basic system configuration
+** Monitor Configuration
+#+begin_src conf
+
+monitor=,preferred,auto,1
+
+# Output
+# Configure your Display resolution, offset, scale and Monitors here, use `hyprctl monitors` to get the info.
+
+#monitor=HDMI-A-1,1920x1080@60,0x0,1
+#workspace=HDMI-A-1,1
+#monitor=HDMI-A-2,1920x1080@60,1920x0,1
+#workspace=HDMI-A-2,2
+
+
+#+end_src
+
+** Variables
+
+#+begin_src conf
+
+$mainMod = SUPER
+$localBin = $HOME/.local/bin
+$scriptsDir = $HOME/.config/hypr/scripts
+$hyprDir = $HOME/.config/hypr
+$term = kitty
+$menu = $scriptsDir/menu
+$fullmenu = $scriptsDir/fullmenu
+$volume = $scriptsDir/volume
+$backlight = $scriptsDir/brightness
+$screenshot = 
+$lock = $scriptsDir/lockscreen
+$colorpicker = $scriptsDir/colorpicker
+$wofi_beats = $scriptsDir/wofi-beats
+$files = pcmanfm
+$browser = brave
+$editor = emacsclient -c -a 'emacs'
+
+
+#+end_src
+
+** Cursor size
+
+#+begin_src conf
+evn=XCURSOR_SIZE,24
+
+#+end_src
+
+** Misc system configs
+#+begin_src conf
+
+input {
+  # qwerty
+  kb_layout = us
+
+
+  kb_variant =
+  kb_model =
+  kb_options =
+  kb_rules =
+
+  follow_mouse = 1
+  numlock_by_default = 1
+
+  touchpad {
+    natural_scroll = true
+    tap-to-click = true
+    drag_lock = true
+    disable_while_typing = true
+  }
+misc {
+  disable_hyprland_logo = true
+  disable_splash_rendering = true
+  mouse_move_enables_dpms = true
+  no_direct_scanout = true #for fullscreen games
+}
+
+binds {
+  workspace_back_and_forth = true
+}
+
+
+#+end_src
+* Startup Hook
+#+begin_src conf
+exec-once = $scriptsDir/startup
+exec-once = swaybg -m fill -i $HOME/.config/hypr/bg/minimal.png
+exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec-once = systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec-once = $scriptsDir/portal
+exec-once = nm-applet
+exec-once = emacs --daemon
+
+#+end_src
+
+* Decorations and animations
+#+begin_src conf
+general {
+  # See https://wiki.hyprland.org/Configuring/Variables/ for more
+
+  gaps_in = 3
+  gaps_out = 7
+  border_size = 2
+
+  #one color
+  #col.active_border = rgba(7aa2f7aa)
+
+  #two colors - gradient
+
+  col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
+  col.inactive_border = rgba(595959aa)
+
+  layout = master
+  #layout = dwindle
+}
+decoration {
+ 
+rounding = 6
+ blur {
+        enabled = true
+        size = 3
+        passes = 1
+        new_optimizations = true   
+ }
+
+  #active_opacity = 1.0
+  #inactive_opacity = 0.9
+  #fullscreen_opacity = 1.0
+
+  drop_shadow = true
+  shadow_range = 4
+  shadow_render_power = 3
+  col.shadow = rgba(1a1a1aee)
+
+  # dim_inactive = true
+  # dim_strength = 0.8
+}
+
+blurls = waybar
+
+animations {
+  enabled = true
+
+  # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+
+  bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+
+  animation = windows, 1, 7, myBezier
+  animation = windowsOut, 1, 7, default, popin 80%
+  animation = border, 1, 10, default
+  animation = fade, 1, 7, default
+  animation = workspaces, 1, 6, default
+}
+dwindle {
+  # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+  pseudotile = true
+  preserve_split = true
+}
+
+master {
+  # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+  new_is_master = true
+  mfact = 0.5
+}
+
+gestures {
+  # See https://wiki.hyprland.org/Configuring/Variables/ for more
+  workspace_swipe = false
+  workspace_swipe_fingers = 3
+}
+#+end_src
+
+* Window Rules
+
+#+begin_src conf
+
+# for waybar yay update click
+windowrulev2 = animation popin, class:^(update)$, title:^(update)$
+windowrulev2 = float, class:^(update)$, title:^(update)$
+windowrulev2 = size 60% 50%, class:^(update)$, title:^(update)$
+windowrulev2 = center, class:^(update)$, title:^(update)$
+
+# for ttyclock
+windowrulev2 = float, class:^(clock)$, title:^(clock)$
+windowrulev2 = size 33% 27%, class:^(clock)$, title:^(clock)$
+windowrulev2 = center, class:^(clock)$, title:^(clock)$
+
+
+#+end_src
+
+* KeyBindings
+
+** Userapps
+#+begin_src conf
+bind = $mainMod SHIFT, R, exec, hyprctl reload
+bind = $mainMod SHIFT, P, exec, $fullmenu
+bind = $mainMod, P, exec, $menu
+bind = $mainMod SHIFT, F, exec, $files
+bind = $mainMod, E, exec, $editor
+bind = $mainMod, Return, exec, $term
+bind = $mainMod, T, exec, $term
+bind = CTRL ALT, T, exec, $term
+bind = $mainMod, V, exec, pavucontrol
+bind = $mainMod, B, exec, $browser
+bind = CTRL SHIFT, Escape,exec, $term --class bpytop -T bpytop -e bpytop
+bind = ALT, g, exec, $scriptsDir/glassmorphismToggle
+#+end_src
+
+** Navigation
+
+*** Windows
+#+begin_src conf
+bind = $mainMod, SPACE, fullscreen
+bind = $mainMod, tab, togglefloating
+bind = $mainMod, Q, killactive,
+
+#+end_src
