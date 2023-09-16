@@ -1,0 +1,1 @@
+/home/subhashis/.config/emacs/elpaca/repos/tldr/tldr.el

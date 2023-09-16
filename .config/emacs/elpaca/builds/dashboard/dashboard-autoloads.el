@@ -14,9 +14,7 @@ Open (or refresh) the *dashboard* buffer.
 
 (fn &rest _)" t)
 (autoload 'dashboard-setup-startup-hook "dashboard" "\
-Setup post initialization hooks.
-If a command line argument is provided, assume a filename and skip displaying
-Dashboard.")
+Setup post initialization hooks unless a command line argument is provided.")
 (register-definition-prefixes "dashboard" '("dashboard-"))
 
 

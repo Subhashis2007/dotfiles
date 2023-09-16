@@ -111,7 +111,7 @@ myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
 -- myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
 
 myFilemanager :: String
-myFilemanager = "pcmanfm"
+myFilemanager = "nemo"
 
 myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows

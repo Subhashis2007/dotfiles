@@ -47,6 +47,16 @@
 (register-definition-prefixes "doom-badger-theme" '("doom-badger"))
 
 
+;;; Generated autoloads from doom-bluloco-dark-theme.el
+
+(register-definition-prefixes "doom-bluloco-dark-theme" '("doom-bluloco-dark"))
+
+
+;;; Generated autoloads from doom-bluloco-light-theme.el
+
+(register-definition-prefixes "doom-bluloco-light-theme" '("doom-bluloco-light"))
+
+
 ;;; Generated autoloads from doom-challenger-deep-theme.el
 
 (register-definition-prefixes "doom-challenger-deep-theme" '("doom-challenger-deep"))
@@ -232,6 +242,16 @@
 (register-definition-prefixes "doom-oceanic-next-theme" '("doom-oceanic-next"))
 
 
+;;; Generated autoloads from doom-oksolar-dark-theme.el
+
+(register-definition-prefixes "doom-oksolar-dark-theme" '("doom-oksolar-dark"))
+
+
+;;; Generated autoloads from doom-oksolar-light-theme.el
+
+(register-definition-prefixes "doom-oksolar-light-theme" '("doom-oksolar-light"))
+
+
 ;;; Generated autoloads from doom-old-hope-theme.el
 
 (register-definition-prefixes "doom-old-hope-theme" '("doom-old-hope"))
@@ -363,12 +383,12 @@ Customize THEME (a symbol) with FACES.
 If THEME is nil, it applies to all themes you load. FACES is a list of Doom
 theme face specs. These is a simplified spec. For example:
 
-  (doom-themes-set-faces 'user
-    '(default :background red :foreground blue)
-    '(doom-modeline-bar :background (if -modeline-bright modeline-bg highlight))
-    '(doom-modeline-buffer-file :inherit 'mode-line-buffer-id :weight 'bold)
-    '(doom-modeline-buffer-path :inherit 'mode-line-emphasis :weight 'bold)
-    '(doom-modeline-buffer-project-root :foreground green :weight 'bold))
+  (doom-themes-set-faces \\='user
+    \\='(default :background red :foreground blue)
+    \\='(doom-modeline-bar :background (if -modeline-bright modeline-bg highlight))
+    \\='(doom-modeline-buffer-file :inherit \\='mode-line-buffer-id :weight \\='bold)
+    \\='(doom-modeline-buffer-path :inherit \\='mode-line-emphasis :weight \\='bold)
+    \\='(doom-modeline-buffer-project-root :foreground green :weight \\='bold))
 
 (fn THEME &rest FACES)")
 (function-put 'doom-themes-set-faces 'lisp-indent-function 'defun)

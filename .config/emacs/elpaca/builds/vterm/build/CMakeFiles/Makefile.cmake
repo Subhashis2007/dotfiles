@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/subhashis/.config/emacs/elpaca/builds/vterm/CMakeLists.txt"
-  "CMakeFiles/3.27.1/CMakeCCompiler.cmake"
-  "CMakeFiles/3.27.1/CMakeSystem.cmake"
+  "CMakeFiles/3.27.5/CMakeCCompiler.cmake"
+  "CMakeFiles/3.27.5/CMakeSystem.cmake"
   "libvterm-prefix/tmp/libvterm-mkdirs.cmake"
   "/usr/share/cmake/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake/Modules/CMakeCCompilerABI.c"
@@ -106,9 +106,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.27.1/CMakeSystem.cmake"
-  "CMakeFiles/3.27.1/CMakeCCompiler.cmake"
-  "CMakeFiles/3.27.1/CMakeCCompiler.cmake"
+  "CMakeFiles/3.27.5/CMakeSystem.cmake"
+  "CMakeFiles/3.27.5/CMakeCCompiler.cmake"
+  "CMakeFiles/3.27.5/CMakeCCompiler.cmake"
   "libvterm-prefix/tmp/libvterm-mkdirs.cmake"
   "libvterm-prefix/tmp/libvterm-gitclone.cmake"
   "libvterm-prefix/src/libvterm-stamp/libvterm-gitinfo.txt"
