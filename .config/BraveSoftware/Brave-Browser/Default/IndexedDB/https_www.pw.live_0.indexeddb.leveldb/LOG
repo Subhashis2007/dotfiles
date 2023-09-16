@@ -1,0 +1,36 @@
+2023/09/16-21:14:46.030 32e Reusing MANIFEST /home/subhashis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.pw.live_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/16-21:14:46.030 32e Recovering log #80
+2023/09/16-21:14:46.030 32e Reusing old log /home/subhashis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.pw.live_0.indexeddb.leveldb/000080.log 
+2023/09/16-21:14:46.030 32e Delete type=2 #79
+2023/09/16-21:14:46.068 32e Level-0 table #85: started
+2023/09/16-21:14:46.070 32e Level-0 table #85: 591 bytes OK
+2023/09/16-21:14:46.072 32e Delete type=0 #80
+2023/09/16-21:14:46.072 32e Manual compaction at level-0 from '\x00 \x00\x00\x00' @ 72057594037927935 : 1 .. '\x00!\x00\x00\x00' @ 0 : 0; will stop at '\x00 \x00\x00\x05' @ 2039 : 1
+2023/09/16-21:14:46.072 32e Compacting 1@0 + 1@1 files
+2023/09/16-21:14:46.074 32e Generated table #86@0: 571 keys, 30444 bytes
+2023/09/16-21:14:46.074 32e Compacted 1@0 + 1@1 files => 30444 bytes
+2023/09/16-21:14:46.076 32e compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/09/16-21:14:46.076 32e Delete type=2 #85
+2023/09/16-21:14:46.076 32e Manual compaction at level-0 from '\x00 \x00\x00\x05' @ 2039 : 1 .. '\x00!\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/09/16-21:14:46.143 33b Level-0 table #88: started
+2023/09/16-21:14:46.145 33b Level-0 table #88: 590 bytes OK
+2023/09/16-21:14:46.147 33b Delete type=0 #84
+2023/09/16-21:14:46.147 33b Delete type=2 #82
+2023/09/16-21:14:46.148 32e Manual compaction at level-0 from '\x00!\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00"\x00\x00\x00' @ 0 : 0; will stop at '\x00!\x00\x00\x05' @ 2058 : 1
+2023/09/16-21:14:46.148 32e Compacting 1@0 + 1@1 files
+2023/09/16-21:14:46.151 32e Generated table #89@0: 575 keys, 30473 bytes
+2023/09/16-21:14:46.151 32e Compacted 1@0 + 1@1 files => 30473 bytes
+2023/09/16-21:14:46.155 32e compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/09/16-21:14:46.156 32e Delete type=2 #88
+2023/09/16-21:14:46.156 32e Manual compaction at level-0 from '\x00!\x00\x00\x05' @ 2058 : 1 .. '\x00"\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/09/16-21:14:49.298 33a Level-0 table #91: started
+2023/09/16-21:14:49.301 33a Level-0 table #91: 1719 bytes OK
+2023/09/16-21:14:49.304 33a Delete type=0 #87
+2023/09/16-21:14:49.304 33a Delete type=2 #86
+2023/09/16-21:14:49.305 32e Manual compaction at level-0 from '\x00"\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00#\x00\x00\x00' @ 0 : 0; will stop at '\x00"\x00\x00\x05' @ 2101 : 1
+2023/09/16-21:14:49.305 32e Compacting 1@0 + 1@1 files
+2023/09/16-21:14:49.308 32e Generated table #92@0: 587 keys, 30581 bytes
+2023/09/16-21:14:49.308 32e Compacted 1@0 + 1@1 files => 30581 bytes
+2023/09/16-21:14:49.310 32e compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/09/16-21:14:49.310 32e Delete type=2 #91
+2023/09/16-21:14:49.311 32e Manual compaction at level-0 from '\x00"\x00\x00\x05' @ 2101 : 1 .. '\x00#\x00\x00\x00' @ 0 : 0; will stop at (end)
