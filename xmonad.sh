@@ -4,13 +4,13 @@ add_line_with_sudo() {
      sudo sed -i "30a$1" /etc/pacman.conf
 }
 
-#### Check for yay ####
-ISYAY=/sbin/yay
+#### Check for paru ####
+ISYAY=/sbin/paru
 if [ -f "$ISYAY" ]; then 
-    echo -e "yay was located, moving on.\n"
-    yay -Suy
+    echo -e "paru was located, moving on.\n"
+    paru -Suy
 else 
-    echo -e "yay was not located, please install yay. Exiting script.\n"
+    echo -e "paru was not located, please install paru. Exiting script.\n"
     exit 
 fi
 
@@ -32,7 +32,7 @@ fi
 
 read -n1 -rep 'Would you like to install the base packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
-    yay -S --noconfirm --disable-download-timeout xorg picom xmonad xmonad-contrib \
+    paru -S --noconfirm --disable-download-timeout xorg picom xmonad xmonad-contrib \
     lightdm lightdm-slick-greeter polybar conky dmenu network-manager-applet\
     rofi gtk2 gtk3 gtk4  alsamixer pulseaudio pulseaudio-alsa \
     pavucontrol alsa-utils alsa-plugins
@@ -40,17 +40,17 @@ fi
 
 read -n1 -rep 'Would you like to install the user packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
-    yay -S --noconfirm --disable-download-timeout brave-bin pcmanfm ntfs-3g \
+    paru -S --noconfirm --disable-download-timeout brave-bin nemo ntfs-3g \
     gvfs mtpfs gvfs-mtp \
     emacs android-tools pulseaudio-equalizer-ladspa wlogout \
     expac xdman kitty bpytop yt-dlp gstreamer gst-plugins-good gst-plugins-bad \
-    nitrogen file-roller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc \
+    nitrogen nemo-fileroller fastfetch-bin shell-color-scripts flameshot rhythmbox vlc \
     gnome-disk-utility gparted exfatprogs 
  fi  
 
 read -n1 -rep 'Would you like to install the fonts and theming packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
-    yay -S --noconfirm --disable-download-timeout noto-fonts \
+    paru -S --noconfirm --disable-download-timeout noto-fonts \
     ttf-font-awesome ttf-jetbrains-mono \
     ttf-ubuntu-font-family \
     lxappearance kvantummanager qt5ct qt6ct \
