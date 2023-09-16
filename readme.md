@@ -6,7 +6,7 @@
 
 Base
 ------
-these are the apps which do the formation of the basic structure or skeleton of desktop
+these are the apps which do the formation of the basic structure or skeleton of Xmonad desktop
 
 ```
 xorg picom xmonad xmonad-contrib lightdm lightdm-slick-greeter polybar conky dmenu rofi gtk2 gtk3 gtk4 network-manager-applet alsamixer alsa-utils alsa-plugins pulseaudio pulseaudio-alsa pavucontrol  
