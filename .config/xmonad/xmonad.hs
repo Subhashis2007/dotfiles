@@ -140,6 +140,7 @@ myStartupHook = do
   spawn "polybar"
   spawnOnce "sleep 2 && xmonad --restart"
   spawnOnce "nitrogen --restore &"   
+  spawn "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
   setWMName "XMONAD"
 
 myNavigation :: TwoD a (Maybe a)
