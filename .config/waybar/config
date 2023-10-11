@@ -1,0 +1,23 @@
+//  __      __                ___.                    
+// /  \    /  \_____   ___.__.\_ |__  _____  _______  
+// \   \/\/   /\__  \ <   |  | | __ \ \__  \ \_  __ \ 
+//  \        /  / __ \_\___  | | \_\ \ / __ \_|  | \/ 
+//   \__/\  /  (____  // ____| |___  /(____  /|__|    
+//        \/        \/ \/          \/      \/         
+//                                     by Subhashis                   
+
+
+{
+  "layer": "top",
+  "position": "top",
+  "width": 1900,
+  "margin-top": 10,
+  "height": 10 , 
+
+"include": ["~/.config/waybar/modules.json"],
+
+  "modules-left": [ "hyprland/workspaces", "custom/separator", "hyprland/window", "custom/separator", ],
+  "modules-center": [ "clock"],
+  "modules-right": [ "network", "pulseaudio", "backlight", "cpu", "disk", "memory", "custom/separator", "wlr/taskbar", "custom/separator", "tray",],
+  
+} 

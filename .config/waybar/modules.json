@@ -1,0 +1,128 @@
+//  __      __                ___.                    
+// /  \    /  \_____   ___.__.\_ |__  _____  _______  
+// \   \/\/   /\__  \ <   |  | | __ \ \__  \ \_  __ \ 
+//  \        /  / __ \_\___  | | \_\ \ / __ \_|  | \/ 
+//   \__/\  /  (____  // ____| |___  /(____  /|__|    
+//        \/        \/ \/          \/      \/         
+//                                     by Subhashis                   
+
+{
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "all-outputs": true,
+      "sort-by-number": true,
+      "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10",
+        "focused": "",
+        "default": ""
+      }
+},
+    "clock": {
+    "format": "<span foreground='#7dcfff'>📅</span> {:%d %B %Y - %I:%M %p}",
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>",
+  },
+   "disk": {
+    "interval": 18000,
+    "format": "<span foreground='#9ece6a'></span> {percentage_used}%",
+    "tooltip-format": "{used} used out of {total} on {path}"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "<span foreground='#e0af68'></span> {usage}%"
+  },
+  "memory": {
+    "interval": 300,
+    "format": "<span foreground='#7aa2f7'>💾</span> {percentage}%",
+    "tooltip-format": "{used:0.2f}GiB used out of {total:0.2f}GiB"
+  },
+  "battery": {
+    "interval": 600,
+    "design-capacity": false,
+    "states": {
+      "warning": 15,
+      "critical":10 
+    },
+    "format": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
+    "format-charging": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
+    "format-time": "{H}h {M}m",
+    "format-icons": ["", "", "", "", "", ""]
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5,
+  },
+  "network": {
+    "interval": 1,
+    "format-wifi": "<span foreground='#61AF1F'></span> {essid} ({signalStrength}%)",
+    "format-ethernet": "<span foreground='#61AF1F'></span> {ipaddr}/{cidr} ",
+    "format-linked": "<span foreground='#61AF1F'>說</span> {essid} (No IP)",
+    "format-disconnected": "<span foreground='#61AF1F'></span> Disconnected",
+    "format-alt": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
+    "tooltip": false
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5",
+    "format": "<span foreground='#b48ead'>{icon}</span> {percent}%",
+    "format-icons": ["","","",""]
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "<span foreground='#d08770'>{icon}</span> {volume}%", 
+    "format-muted": " Muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "states": {
+      "warning": 85,
+    },
+    "scroll-step": 1,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false,
+},
+
+ "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal"
+    },
+},
+"hyprland/window": {
+    "rewrite": {
+      "(.*) - Brave": "$1",
+      "(.*) - Chromium": "$1",
+      "(.*) - Brave Search": "$1",
+      "(.*) - Outlook": "$1",
+      "(.*) Microsoft Teams": "$1"
+    },
+    "separate-outputs": true
+  },
+}
