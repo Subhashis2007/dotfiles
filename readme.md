@@ -35,7 +35,7 @@ Paru is an [AUR](https://aur.archlinux.org/) helper and we need to install it be
 ```
 git clone https://aur.archlinux.org/paru-bin paru && cd paru && makepkg -si
 ```
-#### 3.Base Packages
+### 3.Base Packages
 Base packages are those packages which form the skeleton or a bare system without any customisation
 
 ```
