@@ -19,7 +19,7 @@ Dotfiles serve as configuration files used to tailor the appearance and function
 
 ## Screenshots
 
-![Imgur](https://i.imgur.com/oUCNk7D.png) ![Imgur](https://i.imgur.com/4PWjoLk.png)
+![Imgur](https://i.imgur.com/y8f3spb.png) ![Imgur](https://i.imgur.com/SIHOWKH.png)
 
 
 ## Installation
