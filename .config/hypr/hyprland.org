@@ -132,7 +132,7 @@ This section defines all that apps/programmes we want to get executed at launch 
 
 #+BEGIN_SRC conf
 exec-once = $myBar 
-exec-once = variety
+exec-once = $SCRIPTS/setwall
 exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once = /usr/bin/emacs --daemon
 exec-once = systemctl import-environment --user WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -266,6 +266,7 @@ bindm = $mainMod, mouse:273, resizewindow
 #+begin_src conf
 bind = $mainMod CTRL, N, exec, hyprctl keyword decoration:screen_shader $SCRIPTS/shaders
 bind = $mainMod CTRL , R , exec, hyprctl reload
+bind = $mainMod SHIFT, C, exec, $SCRIPTS/setwall
 #+end_src
 
 * Volume

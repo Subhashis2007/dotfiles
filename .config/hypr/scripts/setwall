@@ -1,0 +1,14 @@
+#!/bin/bash
+
+image_dir="$HOME/Pictures/Walls"
+image_files=("$image_dir"/*.{jpg,jpeg,png,gif})
+num_images=${#image_files[@]}
+random_index=$((RANDOM % num_images))
+random_image="${image_files[random_index]}"
+
+if [[ $(pidof swaybg) ]]; then
+  pkill swaybg
+fi
+
+swaybg -m fill -i $random_image
+
