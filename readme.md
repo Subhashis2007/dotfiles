@@ -46,18 +46,20 @@ git clone https://aur.archlinux.org/paru-bin paru && cd paru && makepkg -si
 Base packages are those packages which form the skeleton or a bare system without any customisation
 
 ```
-paru -Sy wayland libdrm pixman libxkbcommon python2 libxml2 \
-llvm libpng gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland xorg-xhost \
+paru -Sy wayland libdrm pixman libxkbcommon python2 libxml2 llvm libpng \
+gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland xorg-xhost \
 xdg-desktop-portal-hyprland polkit-gnome kitty network-manager-applet \
-alsa-utils alsa-plugins grim slurp variety hyprland xorg-xhost rofi wl-clipboard pavucontrol dunst network-manager-applet \
+alsa-utils alsa-plugins grim slurp hyprland xorg-xhost rofi \
+wl-clipboard pavucontrol dunst network-manager-applet 
 
 ```
 ### 4.User Packages
 User packages are those which we need to customize our setup to some extent and install apps for our workflow
 
 ```
-paru -Sy thunar thunar-volman thunar-archive-plugin file-roller \
-gimp emacs brave-bin 
+paru -Sy thunar thunar-volman \
+thunar-archive-plugin file-roller \
+gimp emacs brave-bin
 ```
 
 ### 5.Setting up dotfiles
