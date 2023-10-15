@@ -272,7 +272,7 @@ bindm = $mainMod, mouse:273, resizewindow
 ** System
 #+begin_src conf
 
-bind = $mainMod SHIFT, N, exec, hyprctl keyword decoration:screen_shader $SCRIPTS/shaders
+bind = $mainMod CTRL, N, exec, hyprctl keyword decoration:screen_shader $SCRIPTS/shaders
 bind = $mainMod CTRL , R , exec, hyprctl reload
 
 #+end_src
