@@ -28,11 +28,11 @@ Dotfiles serve as configuration files used to tailor the appearance and function
 ## Installation
 Installation should be performed in 5 parts in order to avoid confusion and for better understanding of the packages
 
--  [Hyprland installation](#Hyprland-installation)
--  [Installing Paru](#Installing-Paru)
--  [Base Packages](#Base-Packages)
--  [User Packages](#User-Packages)
--  [Setting up dotfiles](#Setting-up-dotfiles)
+-  [Hyprland installation](#1hyprland-installation)
+-  [Installing Paru](#2installing-Paru)
+-  [Base Packages](#3base-packages)
+-  [User Packages](#4user-uackages)
+-  [Setting up dotfiles](#5setting-up-dotfiles)
 
 ### 1.Hyprland installation
 Before proceeding towards installation you need to have installed some basic packages such as `git make fakeroot pkg-config` which you can install using pacman
