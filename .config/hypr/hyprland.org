@@ -19,6 +19,7 @@
 - [[#keybindings][Keybindings]]
   - [[#app-launchers][App Launchers]]
   - [[#windows-navigation][Windows Navigation]]
+  - [[#system][System]]
 - [[#volume][Volume]]
   - [[#wireplumberpipewire][Wireplumber(Pipewire)]]
   - [[#pulseaudio][PulseAudio]]
@@ -41,7 +42,7 @@ $myTerm = kitty
 $myFM = thunar
 $myEditor = emacsclient -c -a 'emacs'
 $myRL = rofi -show drun
-$myBar = env GTK_THEME=Arc waybar 
+$myBar = env GTK_THEME=Minwaita-Dark waybar 
 #+END_SRC
 
 ** Environment Variables
@@ -268,7 +269,13 @@ bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
 
 #+END_SRC
+** System
+#+begin_src conf
 
+bind = $mainMod SHIFT, N, exec, hyprctl keyword decoration:screen_shader $SCRIPTS/shaders
+bind = $mainMod CTRL , R , exec, hyprctl reload
+
+#+end_src
 * Volume
 ** Wireplumber(Pipewire)
 #+BEGIN_SRC conf
