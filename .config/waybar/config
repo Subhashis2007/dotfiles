@@ -10,8 +10,7 @@
 {
   "layer": "top",
   "position": "top",
-  "width": 1900,
-  "margin-top": 10,
+  "width": 1920,
   "height": 10 , 
 
 "include": ["~/.config/waybar/modules.json"],
