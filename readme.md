@@ -1,5 +1,7 @@
 # My Hyprland Dotfiles
-My dotfiles focus more on functionality and less on aesthetics.
+Hyprland is a wlroots based tiling wayland compositor. It provides dynamic tiling, tabbed windows, clean window animations, rounded corners, transparency and more. 
+
+Note: My dotfiles are intended to be more functional and aesthetics wasn't the primary goal, but yeah it has some aesthetics.
 
 ## Table of Contents
 - What are [dotfiles](#Dotfiles)?
