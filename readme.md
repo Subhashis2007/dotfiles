@@ -81,4 +81,7 @@ config config status.showUntrackedFiles no
 
 Your current config files should be backed up at .dotfiles.bak
 
+## Notes
+- If you want to see the config file with a more detailed view, check [hyprland.org](https://github.com/Subhashis2007/dotfiles/blob/Hyprland/.config/hypr/hyprland.org).You may utilise the org file to tangle a hyprland.conf if you so wish, you can check [here](https://orgmode.org/manual/Extracting-Source-Code.html) more about org mode tangling.
+
 
