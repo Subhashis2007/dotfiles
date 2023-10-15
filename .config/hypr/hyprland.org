@@ -108,7 +108,7 @@ misc {
 
 general {
     gaps_in = 3
-    gaps_out = 9
+    gaps_out = 7
     border_size = 2
     col.active_border = rgba(7aa2f7aa) rgba(c4a7e7aa) 45deg
     col.inactive_border = rgba(414868aa)
@@ -272,7 +272,7 @@ bindm = $mainMod, mouse:273, resizewindow
 * Volume
 ** Wireplumber(Pipewire)
 #+BEGIN_SRC conf
-
+###Pipewire
 # bind=,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 # bind=,XF86AudioRaiseVolume,exec,wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
 # bind=,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
@@ -282,6 +282,7 @@ bindm = $mainMod, mouse:273, resizewindow
 ** PulseAudio
 
 #+BEGIN_SRC conf
+###PulseAudio
 bind=,XF86AudioMute,exec, pamixer -t --allow-boost
 bind=,XF86AudioRaiseVolume,exec,pamixer -i 5 --allow-boost
 bind=,XF86AudioLowerVolume,exec,pamixer -d 5 --allow-boost
