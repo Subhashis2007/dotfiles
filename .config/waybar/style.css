@@ -16,7 +16,7 @@
 }
 window#waybar {
   color: #c0caf5;
-  background-color: #24283b;
+  background-color: rgba(36, 40, 59, 0.6);
   border-bottom: 1px solid #414868;
   transition-duration: 0.5s;
   transition-property: background-color;
@@ -61,7 +61,7 @@ window#waybar {
   margin: 0px 2px;   /* gaps between modules */
   padding: 0.2rem 0.6rem;
   color: #c0caf5;
-  background: #24283b;
+  background: rgba(36, 40, 59, 0.6);
   border-bottom: 1px solid #414868;
 }
 #mode,
@@ -86,22 +86,22 @@ window#waybar {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   color: #f7768e;
-  background-color: #24283b;
+  background-color: rgba(36, 40, 59, 0.6);
 }
 #battery.charging {
   color: #9ece6a;
-  background-color: #24283b;
+  background-color: rgba(36, 40, 59, 0.6);
 }
 #mpd.paused {
   color: #414868;
-  background-color: #24283b;
+  background-color: rgba(36, 40, 59, 0.6);
 }
 #mpd.stopped {
   background: transparent;
 }
 #custom-separator {
   color: #414868;
-  background: #24283b;
+  background: rgba(36, 40, 59, 0.6);
   border-bottom: 1px solid #414868;
   margin: 3px 2px 3px 0px;
   padding: 2px 1px 1px 1px;
