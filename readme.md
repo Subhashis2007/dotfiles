@@ -7,6 +7,7 @@ Note: My dotfiles are intended to be more functional and aesthetics wasn't the p
 - What are [dotfiles](#Dotfiles)?
 - [My Different Tiling Window Manager Configs ](#My-Different-Tiling-Window-Manager-Configs)
 - [Installation](#Installation)
+- [Notes](#Notes)
 
 ## Dotfiles
 
@@ -25,12 +26,16 @@ Dotfiles serve as configuration files used to tailor the appearance and function
 
 
 ## Installation
-Before proceeding towards installation you need to have installed some basic packages such as `git make fakeroot pkg-config` which you can install using pacman
-
 Installation should be performed in 5 parts in order to avoid confusion and for better understanding of the packages
 
+-  [Hyprland installation](#Hyprland-installation)
+-  [Installing Paru](#Installing-Paru)
+-  [Base Packages](#Base-Packages)
+-  [User Packages](#User-Packages)
+-  [Setting up dotfiles](#Setting-up-dotfiles)
+
 ### 1.Hyprland installation
-Remember installing any tiling windows manager is a fairly easy task provided you know the packages you need
+Before proceeding towards installation you need to have installed some basic packages such as `git make fakeroot pkg-config` which you can install using pacman
 ### 2.Installing Paru
 Paru is an [AUR](https://aur.archlinux.org/) helper and we need to install it because we'll be needing to install many packages from AUR 
 
