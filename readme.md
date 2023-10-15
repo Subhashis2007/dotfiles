@@ -49,7 +49,7 @@ Base packages are those packages which form the skeleton or a bare system withou
 paru -Sy wayland libdrm pixman libxkbcommon python2 libxml2 llvm libpng \
 gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland xorg-xhost \
 xdg-desktop-portal-hyprland polkit-gnome kitty network-manager-applet \
-alsa-utils alsa-plugins grim slurp hyprland xorg-xhost rofi \
+alsa-utils alsa-plugins grim slurp hyprland xorg-xhost rofi swaybg \
 wl-clipboard pavucontrol dunst network-manager-applet 
 
 ```
