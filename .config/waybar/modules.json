@@ -37,6 +37,7 @@
     "interval": 60,
     "tooltip": true,
     "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>",
+    "on-click-right": "~/.config/hypr/scripts/setwall",
   },
    "disk": {
     "interval": 18000,
