@@ -90,7 +90,7 @@
     "format": "<span foreground='#d08770'>{icon}</span> {volume}%", 
     "format-muted": " Muted",
     "format-icons": {
-      "default": ["", "", ""]
+    "default": [ "🔈","🔉","🔊"]
     },
     "states": {
       "warning": 85,

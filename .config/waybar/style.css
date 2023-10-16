@@ -7,7 +7,7 @@
 */                                  by Subhashis        
 
  {
-  font-family: "Hack Nerd Font";
+  font-family: "MesloLGSDZNFM-Regular";
   font-size: 12pt;
   border: none;
   transition-property: background-color;
@@ -53,7 +53,6 @@ window#waybar {
 #temperature,
 #bluetooth,
 #network,
-#pulseaudio,
 #cpu,
 #memory,
 #battery,
@@ -136,4 +135,10 @@ window#waybar {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
+}
+#pulseaudio {
+  margin: 5px 2px;   /* gaps between modules */
+  color: #c0caf5;
+  border-bottom: 1px solid #414868;
+  padding-top: 4px;
 }
