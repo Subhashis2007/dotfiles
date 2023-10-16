@@ -22,7 +22,7 @@ Dotfiles serve as configuration files used to tailor the appearance and function
 
 ## Screenshots
 
-![Imgur](https://i.imgur.com/y8f3spb.png) ![Imgur](https://i.imgur.com/SIHOWKH.png)
+![Imgur](https://i.imgur.com/fJcgpaH.png) ![Imgur](https://i.imgur.com/EWVPISs.png)
 
 
 ## Installation
