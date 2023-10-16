@@ -1,7 +1,7 @@
 #!/bin/bash
 
 image_dir="$HOME/.config/hypr/Walls"
-image_files=("$image_dir"/*.{jpg,jpeg,png,gif})
+image_files=("$image_dir"/*.{jpg,jpeg,png})
 num_images=${#image_files[@]}
 random_index=$((RANDOM % num_images))
 random_image="${image_files[random_index]}"
