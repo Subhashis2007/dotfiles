@@ -127,3 +127,13 @@ window#waybar {
   font-weight: normal;
   font-style: normal;
 }
+#custom-playerctl {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+}
