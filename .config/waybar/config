@@ -17,5 +17,5 @@
 
 "modules-left": [ "hyprland/workspaces","wlr/taskbar"],
 "modules-center": [ "clock"],
-"modules-right": [ "network", "pulseaudio", "disk"]
+"modules-right": [ "network", "pulseaudio", "disk", "custom/power"]
 } 

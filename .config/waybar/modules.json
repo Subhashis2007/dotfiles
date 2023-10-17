@@ -136,6 +136,10 @@
         "Playing": "<span foreground='#E5B9C6'>    </span>",
         "Paused": "<span foreground='#928374'>    </span>"
       },
+},
+ "custom/power": {
+     "format": "󰤆",
+     "on-click": "~/.config/hypr/scripts/powermenu"
+ },
 }
 
-}

@@ -165,3 +165,7 @@ window#waybar {
   border-bottom: 1px solid #414868;
   padding-top: 4px;
 }
+#custom-power {
+padding-right: 15px;
+color: #c0caf5;
+}
