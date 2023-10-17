@@ -7,12 +7,10 @@
 //                                     by Subhashis                   
 
 {
-  "custom/separator": {
-    "format": "|",
-    "interval": "once",
-    "tooltip": false
-  },
-  "hyprland/workspaces": {
+
+//Workspaces
+  
+"hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "all-outputs": true,
@@ -32,42 +30,44 @@
         "default": ""
       }
 },
-    "clock": {
+
+//CLock    
+"clock": {
     "format": "<span foreground='#7dcfff'>📅</span> {:%d %B %Y - %I:%M %p}",
     "interval": 60,
     "on-click-right": "kitty -e calcurse",
   },
-   "disk": {
+
+
+//Disk   
+"disk": {
     "interval": 18000,
-    "format": "<span foreground='#9ece6a'></span> {percentage_used}%",
+    "format": "<span foreground='#9ece6a'></span> {percentage_used}%",
     "tooltip-format": "{used} used out of {total} on {path}"
   },
-  "cpu": {
+
+
+//Cpu   
+"cpu": {
     "interval": 1,
-    "format": "<span foreground='#e0af68'></span> {usage}%"
+    "format": "<span foreground='#e0af68'></span>  {usage}%"
   },
-  "memory": {
+
+//Memory  
+"memory": {
     "interval": 300,
     "format": "<span foreground='#7aa2f7'>💾</span> {percentage}%",
     "tooltip-format": "{used:0.2f}GiB used out of {total:0.2f}GiB"
   },
-  "battery": {
-    "interval": 600,
-    "design-capacity": false,
-    "states": {
-      "warning": 15,
-      "critical":10 
-    },
-    "format": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
-    "format-charging": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
-    "format-time": "{H}h {M}m",
-    "format-icons": ["", "", "", "", "", ""]
-  },
-  "tray": {
+
+//Tray
+"tray": {
     "icon-size": 15,
     "spacing": 5,
   },
-  "network": {
+
+//Network
+"network": {
     "interval": 1,
     "format-wifi": "<span foreground='#61AF1F'></span> {essid} ({signalStrength}%)",
     "format-ethernet": "<span foreground='#61AF1F'></span> Ethernet",
@@ -76,14 +76,9 @@
     "on-click": "~/.config/hypr/scripts/rofi-wifi-menu",
     "tooltip": false
   },
-  "backlight": {
-    "device": "intel_backlight",
-    "on-scroll-up": "light -A 5",
-    "on-scroll-down": "light -U 5",
-    "format": "<span foreground='#b48ead'>{icon}</span> {percent}%",
-    "format-icons": ["","","",""]
-  },
-  "pulseaudio": {
+
+//Pulse Adudio  
+"pulseaudio": {
     "scroll-step": 1,
     "format": "<span foreground='#d08770'>{icon}</span> {volume}%", 
     "format-muted": " Muted",
@@ -98,7 +93,8 @@
     "tooltip": false,
 },
 
- "wlr/taskbar": {
+//Taskbar 
+"wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 18,
     "tooltip-format": "{title}",
@@ -114,6 +110,8 @@
       "Foot Server": "Terminal"
     },
 },
+
+//Window
 "hyprland/window": {
     "rewrite": {
       "(.*) - Brave": "$1",
@@ -124,7 +122,9 @@
     },
     "separate-outputs": true
   },
-    "custom/playerctl": {
+    
+//PLayerctl
+"custom/playerctl": {
       "format": "{icon}",
       "return-type": "json",
       "max-length": 64,
@@ -137,7 +137,9 @@
         "Paused": "<span foreground='#928374'>    </span>"
       },
 },
- "custom/power": {
+
+//Powermenu 
+"custom/power": {
      "format": "󰤆",
      "on-click": "~/.config/hypr/scripts/powermenu"
  },
