@@ -16,6 +16,7 @@ This file can be tangled into hyprland.conf. Read and understand the config and 
 - [[#startup][Startup]]
 - [[#animations][Animations]]
 - [[#window-layouts][Window Layouts]]
+- [[#window-rules][Window Rules]]
 - [[#gestures--misc][gestures & misc]]
 - [[#keybindings][Keybindings]]
   - [[#app-launchers][App Launchers]]
@@ -184,7 +185,13 @@ master {
     mfact = 0.5
 }
 #+END_SRC
-
+* Window Rules
+#+begin_src conf
+#Calcurse
+windowrulev2 = float, class:^(kitty)$, title:^(calcurse)$
+windowrulev2 = size 35% 50%, class:^(kitty)$, title:^(calcurse)$
+windowrulev2 = center, class:^(kitty)$, title:^(calcurse)$
+#+end_src
 * gestures & misc
 
 #+BEGIN_SRC conf
