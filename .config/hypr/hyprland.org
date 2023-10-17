@@ -7,7 +7,7 @@ This file can be tangled into hyprland.conf. Read and understand the config and 
 * Table Of Contents :toc:
 - [[#monitor][Monitor]]
 - [[#variables][Variables]]
-  - [[#definitionskeywords][definitions/Keywords]]
+  - [[#keywords][Keywords]]
   - [[#environment-variables][Environment Variables]]
   - [[#input][Input]]
   - [[#misc][Misc]]
@@ -34,7 +34,7 @@ monitor=,preferred,auto,auto
 * Variables
 Variables can be used to configure the behavior of the program, define constants, or store information that the program will reference later. [[https://wiki.hyprland.org/Configuring/Variables/][read more]]
 
-** definitions/Keywords
+** Keywords
 These definitions/keywords are used by a user to define the commonly used terms throughout the codespace, it generally starts by a '$' and you can name it anything & use it instead of adding the whole command/line everywhere, in order to give a clean and professional look to your code. [[https://wiki.hyprland.org/Configuring/Keywords/][read more]]
 
 #+BEGIN_SRC conf
@@ -58,6 +58,10 @@ env = QT_QPA_PLATFORMTHEME, gtk2
 env = QT_QPA_PLATFORMTHEME, qt5ct
 env = QT_QPA_PLATFORMTHEME, qt6ct
 env = XDG_CURRENT_DESKTOP, Hyprland
+env = XDG_SESSION_TYPE, wayland
+env = XDG_SESSION_DESKTOP, Hyprland
+env = GDK_BACKEND, wayland,x11
+env = QT_QPA_PLATFORM, wayland;xcb
 #+END_SRC
 
 ** Input
