@@ -35,8 +35,6 @@
     "clock": {
     "format": "<span foreground='#7dcfff'>📅</span> {:%d %B %Y - %I:%M %p}",
     "interval": 60,
-    "tooltip": true,
-    "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>",
     "on-click-right": "kitty -e calcurse",
   },
    "disk": {
@@ -72,7 +70,7 @@
   "network": {
     "interval": 1,
     "format-wifi": "<span foreground='#61AF1F'></span> {essid} ({signalStrength}%)",
-    "format-ethernet": "<span foreground='#61AF1F'></span> {ipaddr}/{cidr} ",
+    "format-ethernet": "<span foreground='#61AF1F'></span> Ethernet",
     "format-linked": "<span foreground='#61AF1F'>說</span> {essid} (No IP)",
     "format-disconnected": "<span foreground='#61AF1F'></span> Disconnected",
     "format-alt": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
@@ -139,4 +137,5 @@
         "Paused": "<span foreground='#928374'>    </span>"
       },
 }
+
 }

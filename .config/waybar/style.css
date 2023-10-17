@@ -7,12 +7,11 @@
 */                                  by Subhashis        
 
  {
-  font-family: "MesloLGSDZNFM-Regular";
-  font-size: 12pt;
+  font-family: JetBrainsMono Nerd Font;  
+  font-size: 10pt;
   border: none;
   transition-property: background-color;
   transition-duration: 0.5s;
-  min-height: 0;
 }
 window#waybar {
   color: #c0caf5;

@@ -15,8 +15,7 @@
 
 "include": ["~/.config/waybar/modules.json"],
 
-  "modules-left": [ "hyprland/workspaces", "custom/separator", "hyprland/window", "custom/separator",],
-  "modules-center": [ "clock"],
-  "modules-right": [ "network", "pulseaudio", "backlight", "cpu", "disk", "memory", "custom/playerctl","custom/separator", "wlr/taskbar", "custom/separator", "tray",],
-  
+"modules-left": [ "hyprland/workspaces","wlr/taskbar"],
+"modules-center": [ "clock"],
+"modules-right": [ "network", "pulseaudio", "disk"]
 } 
