@@ -73,7 +73,7 @@
     "format-ethernet": "<span foreground='#61AF1F'></span> Ethernet",
     "format-linked": "<span foreground='#61AF1F'>說</span> {essid} (No IP)",
     "format-disconnected": "<span foreground='#61AF1F'></span> Disconnected",
-    "format-alt": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
+    "on-click": "~/.config/hypr/scripts/rofi-wifi-menu",
     "tooltip": false
   },
   "backlight": {
