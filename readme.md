@@ -22,8 +22,7 @@ Dotfiles serve as configuration files used to tailor the appearance and function
 
 ## Screenshots
 
-![Imgur](https://i.imgur.com/fJcgpaH.png) ![Imgur](https://i.imgur.com/EWVPISs.png)
-
+[![Video](https://i.imgur.com/KTbZNGV.png)](https://www.youtube.com/watch?v=3HGASR42eIk)
 
 ## Installation
 Installation should be performed in 5 parts in order to avoid confusion and for better understanding of the packages
