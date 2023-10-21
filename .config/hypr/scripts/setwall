@@ -12,3 +12,4 @@ fi
 
 swaybg -m fill -i $random_image
 
+notify-send "Wallpaper has been changed successfully"

@@ -144,7 +144,7 @@ exec-once = systemctl import-environment --user WAYLAND_DISPLAY XDG_CURRENT_DESK
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland 
 exec-once = $SCRIPTS/startup
 exec-once = $SCRIPTS/settheme
-exec = nm-applet 
+exec-once = swayidle -w timeout 150 'swaylock -f' timeout 200 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' 
 #+END_SRC
 
 
@@ -191,6 +191,12 @@ master {
 windowrulev2 = float, class:^(kitty)$, title:^(calcurse)$
 windowrulev2 = size 35% 50%, class:^(kitty)$, title:^(calcurse)$
 windowrulev2 = center, class:^(kitty)$, title:^(calcurse)$
+
+windowrulev2 = opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$
+windowrulev2 = noanim,class:^(xwaylandvideobridge)$
+windowrulev2 = nofocus,class:^(xwaylandvideobridge)$
+windowrulev2 = noinitialfocus,class:^(xwaylandvideobridge)$
+
 #+end_src
 * gestures & misc
 
@@ -218,7 +224,6 @@ bind = $mainMod, E, exec, $myEditor
 bind = $mainMod, H, exec, hyprctl dispatch splitratio -0.1
 bind = $mainMod, L, exec, hyprctl dispatch splitratio 0.1
 bind = CTRL SHIFT, Escape,exec, kitty -e bpytop
-bind = $mainMod, X, exec, $SCRIPTS/powermenu
 bind =, PRINT, exec ,hyprshot -m region
 bind = $mainMod SHIFT, N, exec, variety -n
 bind = $mainMod SHIFT, R, exec, killall waybar && hyprctl dispatch exec $myBar 
@@ -276,8 +281,10 @@ bindm = $mainMod, mouse:273, resizewindow
 
 #+begin_src conf
 bind = $mainMod CTRL, N, exec, hyprctl keyword decoration:screen_shader $SCRIPTS/shaders && notify-send "Night Light is Enabled"
-bind = $mainMod CTRL , R , exec, hyprctl reload
+bind = $mainMod CTRL , R , exec, hyprctl reload && notify-send "Night Light is Disabled"
 bind = $mainMod SHIFT, C, exec, $SCRIPTS/setwall
+bind = $mainMod, W, exec, $SCRIPTS/rofi-wifi-menu
+bind = $mainMod, X, exec, $SCRIPTS/powermenu
 #+end_src
 
 ** Wireplumber(Pipewire)
