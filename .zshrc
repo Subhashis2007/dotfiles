@@ -32,7 +32,9 @@ alias cop='pacman -Qtdq'
 alias clean='sudo pacman -Rns $(pacman -Qtdq)'
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
-
+alias vpacman="sudo vim /etc/pacman.conf"
+alias echaotic='sudo sed -i "s/#\[chaotic-aur\]/\[chaotic-aur\]/g" /etc/pacman.conf && sudo sed -i "s/\#Include = \/etc\/pacman.d\/chaotic-mirrorlist/Include = \/etc\/pacman.d\/chaotic-mirrorlist/g" /etc/pacman.conf'
+alias dchaotic='sudo sed -i "s/\[chaotic-aur\]/#\[chaotic-aur\]/g" /etc/pacman.conf && sudo sed -i "s/\Include = \/etc\/pacman.d\/chaotic-mirrorlist/#Include = \/etc\/pacman.d\/chaotic-mirrorlist/g" /etc/pacman.conf'
 #-------------YT----------------#
 alias yta-aac="yt-dlp --extract-audio --audio-format aac "
 alias yta-best="yt-dlp --extract-audio --audio-format best "
@@ -46,7 +48,7 @@ alias ytv-best="yt-dlp -f bestvideo+bestaudio "
 
 #-----------bare-git-repo-------#
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-
+alias gcp="git cherry-pick"
 
 #----------Prompt--------------#
 colorscript -r
