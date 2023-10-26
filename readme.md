@@ -22,7 +22,7 @@ Dotfiles serve as configuration files used to tailor the appearance and function
 
 ## Screenshots
 
-[![Video](https://i.imgur.com/KTbZNGV.png)](https://www.youtube.com/watch?v=3HGASR42eIk)
+[![Video](https://i.imgur.com/KTbZNGV.png)](https://www.youtube.com/watch?v=Nuqrm--rhDo)
 
 ## Installation
 Installation should be performed in 5 parts in order to avoid confusion and for better understanding of the packages
