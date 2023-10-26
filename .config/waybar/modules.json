@@ -33,7 +33,7 @@
 
 //CLock    
 "clock": {
-    "format": "<span foreground='#7dcfff'>📅</span> {:%d %B %Y - %I:%M %p}",
+    "format": "<span foreground='#7dcfff'>󰃭</span>  {:%d %B %Y - %I:%M %p}",
     "interval": 60,
     "on-click-right": "kitty -e calcurse",
   },
@@ -42,7 +42,7 @@
 //Disk   
 "disk": {
     "interval": 18000,
-    "format": "<span foreground='#9ece6a'></span> {percentage_used}%",
+    "format": "<span foreground='#9ece6a'>󱛟</span>  {percentage_used}%",
     "tooltip-format": "{used} used out of {total} on {path}"
   },
 
@@ -50,13 +50,13 @@
 //Cpu   
 "cpu": {
     "interval": 1,
-    "format": "<span foreground='#e0af68'></span>  {usage}%"
+    "format": "<span foreground='#e0af68'>󰻠</span>  {usage}%"
   },
 
 //Memory  
 "memory": {
     "interval": 300,
-    "format": "<span foreground='#7aa2f7'>💾</span> {percentage}%",
+    "format": "<span foreground='#7aa2f7'>󰍛</span> {percentage}%",
     "tooltip-format": "{used:0.2f}GiB used out of {total:0.2f}GiB"
   },
 
@@ -69,10 +69,10 @@
 //Network
 "network": {
     "interval": 1,
-    "format-wifi": "<span foreground='#61AF1F'></span> {essid} ({signalStrength}%)",
-    "format-ethernet": "<span foreground='#61AF1F'></span> Ethernet",
-    "format-linked": "<span foreground='#61AF1F'>說</span> {essid} (No IP)",
-    "format-disconnected": "<span foreground='#61AF1F'></span> Disconnected",
+    "format-wifi": "<span foreground='#61AF1F'></span>  {essid} ({signalStrength}%)",
+    "format-ethernet": "<span foreground='#61AF1F'>󰈀</span>  Ethernet",
+    "format-linked": "<span foreground='#61AF1F'></span>  {essid} (No IP)",
+    "format-disconnected": "<span foreground='#61AF1F'></span>  Disconnected",
     "on-click": "~/.config/hypr/scripts/rofi-wifi-menu",
     "tooltip": false
   },
@@ -80,10 +80,10 @@
 //Pulse Adudio  
 "pulseaudio": {
     "scroll-step": 1,
-    "format": "<span foreground='#d08770'>{icon}</span> {volume}%", 
-    "format-muted": " Muted",
+    "format": "<span foreground='#d08770'>{icon}</span>  {volume}%", 
+    "format-muted": "  Muted",
     "format-icons": {
-    "default": [ "🔈","🔉","🔊"]
+    "default": [ "","",""]
     },
     "states": {
       "warning": 85,
