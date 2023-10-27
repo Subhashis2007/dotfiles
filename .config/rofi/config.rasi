@@ -2,8 +2,8 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "JetBrainsMono Nerd Font Medium 11";
-  modi: "window,run,drun";
+  font: "Noto Sans 11";
+  modi: "window,run,drun,emoji";
   show-icons: true;
 }
 

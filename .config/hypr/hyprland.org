@@ -46,7 +46,7 @@ $myTerm = kitty
 $myFM = thunar
 $myEditor = emacsclient -c -a 'emacs'
 $myRL = rofi -show drun
-$myBar = env GTK_THEME=Minwaita-Dark waybar 
+$myBar = env GTK_THEME=Minwaita-Vanilla-Dark waybar 
 #+END_SRC
 
 ** Environment Variables
@@ -55,7 +55,6 @@ An environment variable, essentially a named container with data, is utilized by
 #+BEGIN_SRC conf
 env = XCURSOR_SIZE,24
 env = HYPRSHOT_DIR, $HOME/Pictures/Screenshots
-env = QT_QPA_PLATFORMTHEME, gtk2
 env = QT_QPA_PLATFORMTHEME, qt5ct
 env = QT_QPA_PLATFORMTHEME, qt6ct
 env = XDG_CURRENT_DESKTOP, Hyprland
@@ -63,6 +62,7 @@ env = XDG_SESSION_TYPE, wayland
 env = XDG_SESSION_DESKTOP, Hyprland
 env = GDK_BACKEND, wayland,x11
 env = QT_QPA_PLATFORM, wayland;xcb
+env = XCURSOR_THEME, Bibata-Modern-Ice
 #+END_SRC
 
 ** Input
@@ -144,7 +144,7 @@ exec-once = systemctl import-environment --user WAYLAND_DISPLAY XDG_CURRENT_DESK
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland 
 exec-once = $SCRIPTS/startup
 exec-once = $SCRIPTS/settheme
-exec-once = swayidle -w timeout 150 'swaylock -f' timeout 200 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' 
+exec-once = hyprctl setcursor Bibata-Modern-Ice 24 
 #+END_SRC
 
 
@@ -226,7 +226,8 @@ bind = $mainMod, L, exec, hyprctl dispatch splitratio 0.1
 bind = CTRL SHIFT, Escape,exec, kitty -e bpytop
 bind =, PRINT, exec ,hyprshot -m region
 bind = $mainMod SHIFT, N, exec, variety -n
-bind = $mainMod SHIFT, R, exec, killall waybar && hyprctl dispatch exec $myBar 
+bind = $mainMod SHIFT, R, exec, killall waybar && hyprctl dispatch exec $myBar
+bind = $mainMod SHIDT, E, exec, rofi -show emoji 
 #+END_SRC 
 
 ** Windows Navigation

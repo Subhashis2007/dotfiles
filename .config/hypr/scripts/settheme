@@ -5,7 +5,7 @@
 THEME='Catppuccin-Macchiato-Standard-Sapphire-Dark'
 ICONS='candy-icons'
 FONT='Noto Sans 11'
-CURSOR='capitaine-cursors-light'
+CURSOR='Bibata-Modern-Ice'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 

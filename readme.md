@@ -49,7 +49,7 @@ paru -Sy wayland libdrm pixman libxkbcommon python2 libxml2 llvm libpng \
 gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland xorg-xhost \
 xdg-desktop-portal-hyprland polkit-gnome kitty network-manager-applet \
 alsa-utils alsa-plugins grim slurp hyprland xorg-xhost rofi swaybg \
-wl-clipboard pavucontrol dunst network-manager-applet 
+wl-clipboard pavucontrol dunst rofi-emoji  
 
 ```
 ### 4.User Packages
@@ -61,7 +61,8 @@ paru -Sy thunar thunar-volman \
 thunar-archive-plugin file-roller \
 gimp emacs brave-bin \
 ffmpeg ffmpegthumbnailer gst-libav \
-tumbler tumbler-extra-thumbnailers
+tumbler tumbler-extra-thumbnailers \
+noto-fonts noto-fonts-emoji ttf-meslo-nerd
 ```
 
 ### 5.Setting up dotfiles
