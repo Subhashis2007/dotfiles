@@ -11,11 +11,11 @@
   "layer": "top",
   "position": "top",
   "width": 1920,
-  "height": 10 , 
+  "height": 30 , 
 
 "include": ["~/.config/waybar/modules.json"],
 
-"modules-left": [ "hyprland/workspaces","wlr/taskbar"],
+"modules-left": [ "hyprland/workspaces","hyprland/window"],
 "modules-center": [ "clock"],
 "modules-right": [ "network", "pulseaudio", "disk", "custom/power"]
 } 
