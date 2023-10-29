@@ -1,14 +1,58 @@
-monitor=,preferred,auto,auto
+#+TITLE: Subhashis's Hyprland Config
+#+AUTHOR: Subhashis Barad
+#+PROPERTY: header-args :tangle hyprland.conf
+#+auto_tangle: t
+#+STARTUP: showeverything
+This file can be tangled into hyprland.conf. Read and understand the config and tinker it as to your will 😊
+* Table Of Contents :toc:
+- [[#monitor][Monitor]]
+- [[#variables][Variables]]
+  - [[#keywords][Keywords]]
+  - [[#environment-variables][Environment Variables]]
+  - [[#input][Input]]
+  - [[#misc][Misc]]
+  - [[#general][General]]
+  - [[#decoration][Decoration]]
+- [[#startup][Startup]]
+- [[#animations][Animations]]
+- [[#window-layouts][Window Layouts]]
+- [[#window-rules][Window Rules]]
+- [[#gestures--misc][gestures & misc]]
+- [[#keybindings][Keybindings]]
+  - [[#app-launchers][App Launchers]]
+  - [[#windows-navigation][Windows Navigation]]
+  - [[#system][System]]
+  - [[#wireplumberpipewire][Wireplumber(Pipewire)]]
+  - [[#pulseaudio][PulseAudio]]
+  - [[#playerctl][Playerctl]]
 
+* Monitor
+Defining monitor details and specifying it to Hyprland is done through this code block. [[https://wiki.hyprland.org/Configuring/Monitors/][click here to read more]]
+#+BEGIN_SRC conf
+monitor=,preferred,auto,auto
+#+END_SRC
+
+* Variables
+Variables can be used to configure the behavior of the program, define constants, or store information that the program will reference later. [[https://wiki.hyprland.org/Configuring/Variables/][read more]]
+
+** Keywords
+These definitions/keywords are used by a user to define the commonly used terms throughout the codespace, it generally starts by a '$' and you can name it anything & use it instead of adding the whole command/line everywhere, in order to give a clean and professional look to your code. [[https://wiki.hyprland.org/Configuring/Keywords/][read more]]
+
+#+BEGIN_SRC conf
 $mainMod = SUPER
 $SCRIPTS = $HOME/.config/hypr/scripts
-$myBrowser = thorium-browser
+$myBrowser = brave
 $myTerm = kitty
 $myFM = thunar
 $myEditor = emacsclient -c -a 'emacs'
 $myRL = rofi -show drun
-$myBar = env GTK_THEME=Minwaita-Vanilla-Dark waybar
+$myBar = env GTK_THEME=Minwaita-Vanilla-Dark waybar 
+#+END_SRC
 
+** Environment Variables
+An environment variable, essentially a named container with data, is utilized by multiple applications for configuration settings. While Linux newcomers may initially find it complex, these variables simplify the sharing of settings across applications and processes. [[https://wiki.hyprland.org/Configuring/Environment-variables/][read more]]
+
+#+BEGIN_SRC conf
 env = XCURSOR_SIZE,24
 env = HYPRSHOT_DIR, $HOME/Pictures/Screenshots
 env = QT_QPA_PLATFORMTHEME, qt5ct
@@ -18,7 +62,12 @@ env = XDG_SESSION_TYPE, wayland
 env = XDG_SESSION_DESKTOP, Hyprland
 env = GDK_BACKEND, wayland,x11
 env = QT_QPA_PLATFORM, wayland;xcb
-env = XCURSOR_THEME, Bibata-Modern-Ice
+env = XCURSOR_THEME, Bibata-Modern-Icpr
+env = GTK_THEME, Catppuccin-Macchiato-Standard-Sapphire-Dark 
+#+END_SRC
+
+** Input
+#+BEGIN_SRC conf
 
 input {
     kb_layout = us
@@ -35,12 +84,22 @@ input {
     sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
 }
 
+
+#+END_SRC
+
+** Misc
+
+#+BEGIN_SRC conf
 misc {
      disable_hyprland_logo = true
      disable_splash_rendering = true
 
 }
+#+END_SRC
 
+** General
+
+#+BEGIN_SRC conf
 general {
     gaps_in = 3
     gaps_out = 7
@@ -49,7 +108,11 @@ general {
     col.inactive_border = rgba(414868aa)
     layout = master
 }
+#+END_SRC
 
+** Decoration
+
+#+BEGIN_SRC conf
 decoration {
     rounding = 10
 
@@ -68,7 +131,12 @@ decoration {
     shadow_render_power = 3
     col.shadow = rgba(1a1a1aee)
 }
+#+END_SRC
 
+* Startup
+This section defines all that apps/programmes we want to get executed at launch of hyprland.
+
+#+BEGIN_SRC conf
 exec-once = $myBar 
 exec-once = $SCRIPTS/setwall
 exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -77,8 +145,14 @@ exec-once = systemctl import-environment --user WAYLAND_DISPLAY XDG_CURRENT_DESK
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland 
 exec-once = $SCRIPTS/startup
 exec-once = $SCRIPTS/settheme
-exec-once = hyprctl setcursor Bibata-Modern-Ice 24
+exec-once = hyprctl setcursor Bibata-Modern-Ice 24 
+#+END_SRC
 
+
+* Animations
+This code block defines and directs Hyprland how it must present the animation in accordance with our specifications. [[https://wiki.hyprland.org/Configuring/Animations/][read more]]
+
+#+BEGIN_SRC conf
 animations {
     enabled = yes
 
@@ -97,7 +171,11 @@ animations {
   animation = fade, 1, 10, default
   animation = workspaces, 1, 3, wind
 }
+#+END_SRC
 
+* Window Layouts
+In Window Layouts section, we specify Hyprland to use a specific kind of layout between [[https://wiki.hyprland.org/Configuring/Dwindle-Layout/][dwindle]] and [[https://wiki.hyprland.org/Configuring/Master-Layout/][master]]. I personally like the master layout. Since I have been using Xmonad since very long and in it, master is by default.
+#+BEGIN_SRC conf
 dwindle {
     pseudotile = yes # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
     preserve_split = yes # you probably want this
@@ -107,7 +185,9 @@ master {
     new_is_master = true
     mfact = 0.5
 }
-
+#+END_SRC
+* Window Rules
+#+begin_src conf
 #Calcurse
 windowrulev2 = float, class:^(kitty)$, title:^(calcurse)$
 windowrulev2 = size 35% 50%, class:^(kitty)$, title:^(calcurse)$
@@ -118,6 +198,10 @@ windowrulev2 = noanim,class:^(xwaylandvideobridge)$
 windowrulev2 = nofocus,class:^(xwaylandvideobridge)$
 windowrulev2 = noinitialfocus,class:^(xwaylandvideobridge)$
 
+#+end_src
+* gestures & misc
+
+#+BEGIN_SRC conf
 gestures {
     workspace_swipe = off
 }
@@ -125,7 +209,13 @@ gestures {
 device:epic-mouse-v1 {
     sensitivity = -0.5
 }
+#+END_SRC
 
+* Keybindings
+All the keybindings are specified in this section.
+** App Launchers
+
+#+BEGIN_SRC conf
 bind = $mainMod, return, exec, $myTerm
 bind = $mainMod SHIFT, F, exec, $myFM
 bind = $mainMod, P, exec, $myRL
@@ -138,8 +228,12 @@ bind = CTRL SHIFT, Escape,exec, kitty -e bpytop
 bind =, PRINT, exec ,hyprshot -m region
 bind = $mainMod SHIFT, N, exec, variety -n
 bind = $mainMod SHIFT, R, exec, killall waybar && hyprctl dispatch exec $myBar
-bind = $mainMod SHIFT, E, exec, rofi -show emoji
+bind = $mainMod SHIFT, E, exec, rofi -show emoji 
+#+END_SRC 
 
+** Windows Navigation
+
+#+BEGIN_SRC conf
 bind = $mainMod SHIFT, right, swapnext
 bind = $mainMod SHIFT, left, swapnext
 bind = $mainMod, Q, killactive, 
@@ -184,23 +278,37 @@ bind = $mainMod, mouse_up, workspace, e-1
 # Move/resize windows with mainMod + LMB/RMB and dragging
 bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
+#+END_SRC
+** System
 
+#+begin_src conf
 bind = $mainMod CTRL, N, exec, hyprctl keyword decoration:screen_shader $SCRIPTS/shaders && notify-send "Night Light is Enabled"
 bind = $mainMod CTRL , R , exec, hyprctl reload && notify-send "Night Light is Disabled"
 bind = $mainMod SHIFT, C, exec, $SCRIPTS/setwall
 bind = $mainMod, W, exec, $SCRIPTS/rofi-wifi-menu
 bind = $mainMod, X, exec, $SCRIPTS/powermenu
+#+end_src
 
+** Wireplumber(Pipewire)
+#+BEGIN_SRC conf
 ###Pipewire
 # bind=,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 # bind=,XF86AudioRaiseVolume,exec,wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
 # bind=,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+#+END_SRC
 
+** PulseAudio
+
+#+BEGIN_SRC conf
 ###PulseAudio
 bind=,XF86AudioMute,exec, pamixer -t
 bind=,XF86AudioRaiseVolume,exec, pamixer -i 5 
-bind=,XF86AudioLowerVolume,exec, pamixer -d 5
+bind=,XF86AudioLowerVolume,exec, pamixer -d 5 
+#+END_SRC
+** Playerctl
 
+#+begin_src conf
 bind = $mainMod CTRL, left, exec, playerctl next
 bind = $mainMod CTRL, right, exec, playerctl next
 bind = $mainMod CTRL, space, exec, playerctl play-pause
+#+end_src

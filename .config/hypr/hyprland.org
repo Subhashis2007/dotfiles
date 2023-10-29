@@ -41,7 +41,7 @@ These definitions/keywords are used by a user to define the commonly used terms 
 #+BEGIN_SRC conf
 $mainMod = SUPER
 $SCRIPTS = $HOME/.config/hypr/scripts
-$myBrowser = brave
+$myBrowser = thorium-browser
 $myTerm = kitty
 $myFM = thunar
 $myEditor = emacsclient -c -a 'emacs'
@@ -227,7 +227,7 @@ bind = CTRL SHIFT, Escape,exec, kitty -e bpytop
 bind =, PRINT, exec ,hyprshot -m region
 bind = $mainMod SHIFT, N, exec, variety -n
 bind = $mainMod SHIFT, R, exec, killall waybar && hyprctl dispatch exec $myBar
-bind = $mainMod SHIDT, E, exec, rofi -show emoji 
+bind = $mainMod SHIFT, E, exec, rofi -show emoji 
 #+END_SRC 
 
 ** Windows Navigation
