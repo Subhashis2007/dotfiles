@@ -35,7 +35,6 @@
 "clock": {
     "format": "<span foreground='#7dcfff'>󰃭</span>  {:%d %B %Y - %I:%M %p}",
     "interval": 60,
-    "on-click-right": "kitty -e calcurse",
   },
 
 
