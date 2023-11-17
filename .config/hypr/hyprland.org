@@ -46,7 +46,8 @@ $myTerm = kitty
 $myFM = nemo
 $myEditor = emacsclient -c -a 'emacs'
 $myRL = rofi -show drun
-$myBar = env GTK_THEME=Minwaita-Vanilla-Dark waybar 
+##$myBar = env GTK_THEME=Minwaita-Vanilla-Dark waybar
+$myBar = gBar bar 0 
 #+END_SRC
 
 ** Environment Variables
@@ -114,7 +115,7 @@ general {
 
 #+BEGIN_SRC conf
 decoration {
-    rounding = 10
+    rounding = 5
 
         blur {
         enabled = true
@@ -227,7 +228,7 @@ bind = $mainMod, L, exec, hyprctl dispatch splitratio 0.1
 bind = CTRL SHIFT, Escape,exec, kitty -e bpytop
 bind =, PRINT, exec ,hyprshot -m region
 bind = $mainMod SHIFT, N, exec, variety -n
-bind = $mainMod SHIFT, R, exec, killall waybar && hyprctl dispatch exec $myBar
+bind = $mainMod SHIFT, R, exec, killall gBar && hyprctl dispatch exec $myBar
 bind = $mainMod SHIFT, E, exec, rofi -show emoji 
 #+END_SRC 
 
