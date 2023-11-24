@@ -4,13 +4,15 @@
 }
 
 .popup {
-  color: #50fa7b;
+  color: #AED9AA;
 }
 
 .bar, tooltip {
-  background-color: #282a36;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   margin: 7px 6px 5px 6px;
+  padding: 7px 0px 7px 0px;
+  min-height: 7px;
 }
 
 .right {
@@ -22,27 +24,32 @@
 }
 
 .reboot-button {
-  font-size: 28px;
   color: #6272a4;
 }
 
 .sleep-button {
-  font-size: 28px;
   color: #6272a4;
 }
 
 .exit-button {
-  font-size: 28px;
   color: #6272a4;
 }
 
 .power-button {
-  font-size: 28px;
   color: #ff5555;
+  margin-left: 5px;
+  margin-right: 01px;
+}
+
+.reboot-button,
+.sleep-button,
+.exit-button,
+.power-button {
+  font-size: 20px;
 }
 
 .system-confirm {
-  color: #50fa7b;
+  color: #AED9AA;
 }
 
 trough {
@@ -73,22 +80,27 @@ highlight {
 }
 
 .audio-icon {
-  font-size: 24px;
-  color: #ffb86c;
+  font-size: 20px;
+  color: #FFA07A
 }
 
 .audio-volume {
-  font-size: 16px;
-  color: #ffb86c;
+  font-size: 12px;
+  color: #FFA07A;
 }
 .audio-volume trough {
   background-color: #44475a;
+  min-height: 5px;
+  min-width: 5px;
 }
 .audio-volume slider {
   background-color: transparent;
 }
 .audio-volume highlight {
-  background-color: #ffb86c;
+  background-color: #FFA07A;
+  min-height: 5px;
+  min-width: 5px;
+
 }
 
 .mic-icon {
@@ -148,12 +160,12 @@ highlight {
 }
 
 .vram-util-progress {
-  color: #ffb86c;
+  color: #FFA07A;
   background-color: #44475a;
 }
 
 .vram-data-text {
-  color: #ffb86c;
+  color: #FFA07A;
   font-size: 16px;
 }
 
@@ -178,13 +190,13 @@ highlight {
 }
 
 .cpu-util-progress {
-  color: #50fa7b;
+  color: #AED9AA;
   background-color: #44475a;
   font-size: 16px;
 }
 
 .cpu-data-text {
-  color: #50fa7b;
+  color: #AED9AA;
   font-size: 16px;
 }
 
@@ -200,11 +212,11 @@ highlight {
 }
 
 .battery-charging {
-  color: #ffb86c;
+  color: #FFA07A;
 }
 
 .network-data-text {
-  color: #50fa7b;
+  color: #AED9AA;
   font-size: 16px;
 }
 
@@ -213,7 +225,7 @@ highlight {
 }
 
 .network-up-low {
-  color: #50fa7b;
+  color: #AED9AA;
 }
 
 .network-up-mid-low {
@@ -221,7 +233,7 @@ highlight {
 }
 
 .network-up-mid-high {
-  color: #ffb86c;
+  color: #FFA07A;
 }
 
 .network-up-high {
@@ -237,7 +249,7 @@ highlight {
 }
 
 .network-down-low {
-  color: #50fa7b;
+  color: #AED9AA;
 }
 
 .network-down-mid-low {
@@ -245,7 +257,7 @@ highlight {
 }
 
 .network-down-mid-high {
-  color: #ffb86c;
+  color: #FFA07A;
 }
 
 .network-down-high {
@@ -277,7 +289,7 @@ highlight {
 }
 
 .ws-active {
-  color: #50fa7b;
+  color: #8be9fd;
   font-size: 16px;
 }
 
@@ -302,12 +314,12 @@ highlight {
     color: #f1fa8c;
   }
   to {
-    color: #50fa7b;
+    color: #AED9AA;
   }
 }
 @keyframes scanoffanim {
   from {
-    color: #50fa7b;
+    color: #AED9AA;
   }
   to {
     color: #f1fa8c;
