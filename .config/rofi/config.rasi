@@ -1,18 +1,18 @@
 configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
-  drun-display-format: "{name}";
-  font: "Noto Sans 11";
-  modi: "window,run,drun,emoji";
-  show-icons: true;
+	modes: "window,drun,run,ssh,emoji";
+	font: "JetBrainsMono Nerd Font Medium 11";
+	show-icons: true;
+	icon-theme: "candy-icons";
+	drun-display-format: "{name}";
+	case-sensitive: false;
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #1e1e2e;
-  bg-alt: #585b70;
-  bg-selected: #313244;
+  bg: #000000;
+  bg-alt: #585b7066;
+  bg-selected: #31324466;
 
   fg: #cdd6f4;
   fg-alt: #7f849c;
@@ -25,7 +25,8 @@ configuration {
 }
 
 window {
-  width: 30%;
+  width: 25%;
+  height: 35%;
   background-color: @bg;
 }
 
@@ -47,7 +48,7 @@ element-text {
 }
 
 element-icon {
-  size: 18;
+  size: 14;
   padding: 0 10 0 0;
   background-color: transparent;
 }
@@ -80,6 +81,3 @@ prompt {
   background-color: @bg-alt;
   text-color: @fg;
 }
-
-/* vim: ft=sass
-

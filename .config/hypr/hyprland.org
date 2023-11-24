@@ -47,7 +47,8 @@ $myFM = nemo
 $myEditor = emacsclient -c -a 'emacs'
 $myRL = rofi -show drun
 ##$myBar = env GTK_THEME=Minwaita-Vanilla-Dark waybar
-$myBar = gBar bar 0 
+$myBar = gBar bar 0
+$CONFIG = $HOME/.config/ 
 #+END_SRC
 
 ** Environment Variables
@@ -105,8 +106,8 @@ general {
     gaps_in = 3
     gaps_out = 7
     border_size = 2
-    col.active_border = rgba(7aa2f7aa) rgba(c4a7e7aa) 45deg
-    col.inactive_border = rgba(414868aa)
+    col.active_border = rgba(00FFFFCC) rgba(FF69B4CC) 45deg
+    col.inactive_border = rgba(C0C0C080)
     layout = master
 }
 #+END_SRC
@@ -139,7 +140,7 @@ This section defines all that apps/programmes we want to get executed at launch 
 
 #+BEGIN_SRC conf
 exec-once = $myBar 
-exec-once = $SCRIPTS/setwall
+exec-once = variety
 exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once = /usr/bin/emacs --daemon
 exec-once = systemctl import-environment --user WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -190,9 +191,9 @@ master {
 * Window Rules
 #+begin_src conf
 #Calcurse
-windowrulev2 = float, class:^(kitty)$, title:^(calcurse)$
-windowrulev2 = size 35% 50%, class:^(kitty)$, title:^(calcurse)$
-windowrulev2 = center, class:^(kitty)$, title:^(calcurse)$
+windowrulev2 = move 1429 526, class:^(kitty)$, title:^(cava)$
+windowrulev2 = size 25% 50%, class:^(kitty)$, title:^(cava)$
+windowrulev2 = float, class:^(kitty)$, title:^(cava)$
 
 windowrulev2 = opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$
 windowrulev2 = noanim,class:^(xwaylandvideobridge)$
@@ -229,7 +230,8 @@ bind = CTRL SHIFT, Escape,exec, kitty -e bpytop
 bind =, PRINT, exec ,hyprshot -m region
 bind = $mainMod SHIFT, N, exec, variety -n
 bind = $mainMod SHIFT, R, exec, killall gBar && hyprctl dispatch exec $myBar
-bind = $mainMod SHIFT, E, exec, rofi -show emoji 
+bind = $mainMod SHIFT, E, exec, rofi -show emoji
+bind = $mainMod CTRL, C, exec, kitty -e cava
 #+END_SRC 
 
 ** Windows Navigation
@@ -285,9 +287,10 @@ bindm = $mainMod, mouse:273, resizewindow
 #+begin_src conf
 bind = $mainMod CTRL, N, exec, hyprctl keyword decoration:screen_shader $SCRIPTS/shaders && notify-send "Night Light is Enabled"
 bind = $mainMod CTRL , R , exec, hyprctl reload && notify-send "Night Light is Disabled"
-bind = $mainMod SHIFT, C, exec, $SCRIPTS/setwall
-bind = $mainMod, W, exec, $SCRIPTS/rofi-wifi-menu
-bind = $mainMod, X, exec, $SCRIPTS/powermenu
+bind = $mainMod SHIFT, N, exec, variety -n
+bind = $mainMod SHIFT, P, exec, variety -p
+bind = $mainMod, W, exec, $CONFIG/rofi/scripts/rofi-wifi-menu
+bind = $mainMod, X, exec, $CONFIG/rofi/scripts/powermenu
 #+end_src
 
 ** Wireplumber(Pipewire)

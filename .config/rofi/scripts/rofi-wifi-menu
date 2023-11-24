@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Starts a scan of available broadcasting SSIDs
 # nmcli dev wifi rescan
@@ -9,7 +9,7 @@ FIELDS=SSID,SECURITY
 POSITION=0
 YOFF=0
 XOFF=0
-FONT="JetBrainsMono Nerd Font Medium 11"
+FONT="JetBrainMono Nerd Font Medium 10"
 
 if [ -r "$DIR/config" ]; then
 	source "$DIR/config"
