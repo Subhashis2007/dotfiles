@@ -46,7 +46,7 @@ static const char *myfm[] = {"thunar", NULL};
 static const char *ss[] = {"flameshot", "gui", NULL};
 static const char *mycava[] = {"kitty", "-e", "cava", NULL};
 // theme
-#include "themes/onedark.h"
+#include "themes/dracula.h"
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */
