@@ -132,18 +132,18 @@ static const Key keys[] = {
     /* modifier                         key         function        argument */
 
     // brightness and audio 
-        {0,                            XF86XK_AudioLowerVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-")},
-	{0,                            XF86XK_AudioMute,         spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")},
-	{0,                            XF86XK_AudioRaiseVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+")},
+        {0,                           XF86XK_AudioLowerVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-")},
+	{0,                           XF86XK_AudioMute,         spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")},
+	{0,                           XF86XK_AudioRaiseVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+")},
  
     // screenshot 
-       {0,                            XK_Print,                 spawn, {.v = ss}},
-
-    { Mod1Mask,              XK_p,       spawn,          {.v = myrofid}},
-    { Mod1Mask,              XK_e,       spawn,          {.v = myrofie}},
-    { Mod1Mask,              XK_w,       spawn,          {.v = myrofiw}},
-    { Mod1Mask,              XK_b,       spawn,          {.v = myrofib}},
-    { Mod1Mask,              XK_x,       spawn,          {.v = myrofip}},
+       {0,                            XK_Print,    spawn,          {.v = ss}},
+//Other keybindings
+    { Mod1Mask,                       XK_p,        spawn,          {.v = myrofid}},
+    { Mod1Mask,                       XK_e,        spawn,          {.v = myrofie}},
+    { Mod1Mask,                       XK_w,        spawn,          {.v = myrofiw}},
+    { Mod1Mask,                       XK_b,        spawn,          {.v = myrofib}},
+    { Mod1Mask,                       XK_x,        spawn,          {.v = myrofip}},
 
     { MODKEY,                          XK_Return,  spawn,          {.v = myterm}},
     { MODKEY,                          XK_b,       spawn,          {.v = mybrowser}},
@@ -255,8 +255,6 @@ static const Button buttons[] = {
     { ClkClientWin,         MODKEY,         Button1,        moveorplace,    {.i = 0} },
     { ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
     { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-    { ClkClientWin,         ControlMask,    Button1,        dragmfact,      {0} },
-    { ClkClientWin,         ControlMask,    Button3,        dragcfact,      {0} },
     { ClkTagBar,            0,              Button1,        view,           {0} },
     { ClkTagBar,            0,              Button3,        toggleview,     {0} },
     { ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
