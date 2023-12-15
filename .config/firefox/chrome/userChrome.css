@@ -1,0 +1,13 @@
+/* MIN MAX CLOSE Remove */
+.titlebar-buttonbox-container {
+  display: none !important;
+}
+
+/* /\* Hide Tab Close buttons *\/ */
+/* .tabbrowser-tab .tab-close-button { */
+/*   display: none !important; */
+/* } */
+
+#alltabs-button {
+    display: none !important;
+}
