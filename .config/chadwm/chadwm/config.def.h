@@ -170,10 +170,8 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                 XK_o,       setcfact,       {.f =  0.00} },
 
 
-    { MODKEY|ShiftMask,                 XK_j,       movestack,      {.i = +1 } },
-    { MODKEY|ShiftMask,                 XK_k,       movestack,      {.i = -1 } },
-    { MODKEY|ShiftMask,                 XK_Return,  zoom,           {0} },
-    { MODKEY,                           XK_Tab,     view,           {0} },
+    { MODKEY|ShiftMask,                 XK_Left,    movestack,      {.i = +1 } },
+    { MODKEY|ShiftMask,                 XK_Right,   movestack,      {.i = -1 } },
 
     // overall gaps
     { MODKEY|ControlMask,               XK_i,       incrgaps,       {.i = +1 } },
@@ -220,10 +218,6 @@ static const Key keys[] = {
 
     // restart
     { MODKEY|ShiftMask,                 XK_r,       restart,           {0} },
-
-    // hide & restore windows
-    { MODKEY,                           XK_e,       hidewin,        {0} },
-    { MODKEY|ShiftMask,                 XK_e,       restorewin,     {0} },
 
     TAGKEYS(                            XK_1,                       0)
     TAGKEYS(                            XK_2,                       1)
