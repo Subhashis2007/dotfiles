@@ -137,11 +137,10 @@ static const Key keys[] = {
     /* modifier                         key         function        argument */
 
     // brightness and audio 
-    {0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol}},
-	{0,                       XF86XK_AudioMute, spawn, {.v = mutevol }},
-	{0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol}},
-	{0,				XF86XK_MonBrightnessUp,		spawn,	{.v = light_up}},
-	{0,				XF86XK_MonBrightnessDown,	spawn,	{.v = light_down}},
+        {0,                            XF86XK_AudioLowerVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-")},
+	{0,                            XF86XK_AudioMute,         spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")},
+	{0,                            XF86XK_AudioRaiseVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+")},
+        {0,                            XK_Print,                 spawn, {.v = ss}},
 
     // screenshot fullscreen and cropped
     {MODKEY|ControlMask,                XK_u,       spawn,
