@@ -1,9 +1,9 @@
 configuration{
-    modi: "run,drun,window";
+    modi: "run,drun,window,emoji";
     lines: 5;
-    font: "Iosevka 12";
+    font: "JetBrainsMono NF Medium:style=Medium,Regular 12";
     show-icons: true;
-    icon-theme: "Paper Mono";
+    icon-theme: "Tela dracula dark";
     terminal: "st";
     drun-display-format: "{icon} {name}";
     location: 0;
