@@ -32,8 +32,19 @@ static const int new_window_attach_on_end = 0; /*  1 means the new window will a
 #define ICONSIZE 19   /* icon size */
 #define ICONSPACING 8 /* space between icon and title */
 
-static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19" };
-
+static const char *myterm[] = { "kitty", NULL};
+static const char *myeditor[] = {"emacsclient", "-c", "-a", "emacs", NULL};
+static const char *myrofid[] = {"rofi", "-show", "drun", NULL};
+static const char *myrofie[] = {"rofi", "-show", "emoji", NULL};
+static const char *myrofiw[] = {"bash", "/home/subhashis/.config/rofi/scripts/rofi-wifi-menu", NULL};
+static const char *myrofib[] = {"bash", "/home/subhashis/.config/rofi/scripts/rofi-bluetooth", NULL};
+static const char *myrofip[] = {"bash", "/home/subhashis/.config/rofi/scripts/powermenu", NULL};
+static const char *mybrowser[] = {"firefox", NULL};
+static const char *mydmenu[] = {"dmenu_run", "-nb", "#282a36", "-nf", "#f8f8f2", "-sb", "#bd93f9", "-sf", "#f8f8f2", "-fn", "Monospace:size=10", "-p", "Run:", NULL};
+static const char *fonts[] = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19" };
+static const char *myfm[] = {"thunar", NULL};
+static const char *ss[] = {"flameshot", "gui", NULL};
+static const char *mycava[] = {"kitty", "-e", "cava", NULL};
 // theme
 #include "themes/onedark.h"
 
@@ -124,33 +135,33 @@ static const Key keys[] = {
         {0,                            XF86XK_AudioLowerVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-")},
 	{0,                            XF86XK_AudioMute,         spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")},
 	{0,                            XF86XK_AudioRaiseVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+")},
-        {0,                            XK_Print,                 spawn, {.v = ss}},
+ 
+    // screenshot 
+       {0,                            XK_Print,                 spawn, {.v = ss}},
 
-    // screenshot fullscreen and cropped
-    {MODKEY|ControlMask,                XK_u,       spawn,
-        SHCMD("maim | xclip -selection clipboard -t image/png")},
-    {MODKEY,                            XK_u,       spawn,
-        SHCMD("maim --select | xclip -selection clipboard -t image/png")},
+    { Mod1Mask,              XK_p,       spawn,          {.v = myrofid}},
+    { Mod1Mask,              XK_e,       spawn,          {.v = myrofie}},
+    { Mod1Mask,              XK_w,       spawn,          {.v = myrofiw}},
+    { Mod1Mask,              XK_b,       spawn,          {.v = myrofib}},
+    { Mod1Mask,              XK_x,       spawn,          {.v = myrofip}},
 
-    { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
-    { MODKEY,                           XK_Return,  spawn,            SHCMD("st")},
+    { MODKEY,                          XK_Return,  spawn,          {.v = myterm}},
+    { MODKEY,                          XK_b,       spawn,          {.v = mybrowser}},
+    { MODKEY|ShiftMask,                XK_f,       spawn,          {.v = myfm}},
+    { MODKEY,                          XK_e,       spawn,          {.v = myeditor}},
+    { MODKEY,                          XK_d,       spawn,          {.v = mydmenu } },
+    { MODKEY,                          XK_c,       spawn,          {.v = mycava } },
 
-    // toggle stuff
-    { MODKEY,                           XK_b,       togglebar,      {0} },
-    { MODKEY|ControlMask,               XK_t,       togglegaps,     {0} },
-    { MODKEY|ShiftMask,                 XK_space,   togglefloating, {0} },
-    { MODKEY,                           XK_f,       togglefullscr,  {0} },
+     // toggle stuff
+    { MODKEY,                          XK_f,       togglebar,      {0} },
+    { MODKEY|ControlMask,              XK_t,       togglegaps,     {0} },
+    { MODKEY|ShiftMask,                XK_space,   togglefloating, {0} },
+    { MODKEY,                          XK_space,   togglefullscr,  {0} },
 
-    { MODKEY|ControlMask,               XK_w,       tabmode,        { -1 } },
-    { MODKEY,                           XK_j,       focusstack,     {.i = +1 } },
-    { MODKEY,                           XK_k,       focusstack,     {.i = -1 } },
-    { MODKEY,                           XK_i,       incnmaster,     {.i = +1 } },
-    { MODKEY,                           XK_d,       incnmaster,     {.i = -1 } },
-
-    // shift view
-    { MODKEY,                           XK_Left,    shiftview,      {.i = -1 } },
-    { MODKEY,                           XK_Right,   shiftview,      {.i = +1 } },
-
+    /* { MODKEY|ControlMask,              XK_w,       tabmode,        { -1 } }, */
+    { MODKEY,                          XK_Left,    focusstack,     {.i = +1 } },
+    { MODKEY,                          XK_Right,   focusstack,     {.i = -1 } },
+  
     // change m,cfact sizes 
     { MODKEY,                           XK_h,       setmfact,       {.f = -0.05} },
     { MODKEY,                           XK_l,       setmfact,       {.f = +0.05} },
