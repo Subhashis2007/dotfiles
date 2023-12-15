@@ -105,17 +105,6 @@ static const Layout layouts[] = {
     /* symbol     arrange function */
     { "[]=",      tile },    /* first entry is default */
     { "[M]",      monocle },
-    { "[@]",      spiral },
-    { "[\\]",     dwindle },
-    { "H[]",      deck },
-    { "TTT",      bstack },
-    { "===",      bstackhoriz },
-    { "HHH",      grid },
-    { "###",      nrowgrid },
-    { "---",      horizgrid },
-    { ":::",      gaplessgrid },
-    { "|M|",      centeredmaster },
-    { ">M>",      centeredfloatingmaster },
     { "><>",      NULL },    /* no layout function means floating behavior */
     { NULL,       NULL },
 };
@@ -205,14 +194,11 @@ static const Key keys[] = {
     { MODKEY|ControlMask|ShiftMask,     XK_d,       defaultgaps,    {0} },
 
     // layout
-    { MODKEY,                           XK_t,       setlayout,      {.v = &layouts[0]} },
-    { MODKEY|ShiftMask,                 XK_f,       setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                           XK_m,       setlayout,      {.v = &layouts[2]} },
-    { MODKEY|ControlMask,               XK_g,       setlayout,      {.v = &layouts[10]} },
-    { MODKEY|ControlMask|ShiftMask,     XK_t,       setlayout,      {.v = &layouts[13]} },
-    { MODKEY,                           XK_space,   setlayout,      {0} },
-    { MODKEY|ControlMask,               XK_comma,   cyclelayout,    {.i = -1 } },
-    { MODKEY|ControlMask,               XK_period,  cyclelayout,    {.i = +1 } },
+    { MODKEY|ControlMask,               XK_t,       setlayout,      {.v = &layouts[0]} },
+    { MODKEY|ControlMask,               XK_m,       setlayout,      {.v = &layouts[1]} },
+    { MODKEY|ControlMask,               XK_f,       setlayout,      {.v = &layouts[2]} },
+    /* { MODKEY,                           XK_space,   setlayout,      {0} }, */
+    { MODKEY|ControlMask,               XK_Tab,     cyclelayout,    {.i = -1 } },
     { MODKEY,                           XK_0,       view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,                 XK_0,       tag,            {.ui = ~0 } },
     { MODKEY,                           XK_comma,   focusmon,       {.i = -1 } },
