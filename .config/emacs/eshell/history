@@ -1,0 +1,7 @@
+chmod +x startup 
+chmod +x settheme
+chmod +x setwall
+cd scripts/
+chmod +x setwall
+exit
+cava
