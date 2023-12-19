@@ -4,7 +4,8 @@ xrdb merge ~/.Xresources
 xset r rate 200 50 &
 picom &
 /usr/bin/emacs --daemon &
-nitrogen --restore &
+# nitrogen --restore &
+variety &
 xscreensaver -no-splash &
 run "bash ~/.config/chadwm/scripts/settheme"
 run "bash ~/.config/chadwm/scripts/startup"
