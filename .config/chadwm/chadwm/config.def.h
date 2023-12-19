@@ -131,14 +131,15 @@ static const Layout layouts[] = {
 static const Key keys[] = {
     /* modifier                         key         function        argument */
 
-    // brightness and audio 
+    // audio 
         {0,                           XF86XK_AudioLowerVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-")},
 	{0,                           XF86XK_AudioMute,         spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")},
 	{0,                           XF86XK_AudioRaiseVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+")},
  
     // screenshot 
        {0,                            XK_Print,    spawn,          {.v = ss}},
-//Other keybindings
+ 
+  //Other keybindings
     { Mod1Mask,                       XK_p,        spawn,          {.v = myrofid}},
     { Mod1Mask,                       XK_e,        spawn,          {.v = myrofie}},
     { Mod1Mask,                       XK_w,        spawn,          {.v = myrofiw}},
@@ -150,8 +151,13 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                XK_f,       spawn,          {.v = myfm}},
     { MODKEY,                          XK_e,       spawn,          {.v = myeditor}},
     { MODKEY,                          XK_d,       spawn,          {.v = mydmenu } },
-    { MODKEY,                          XK_c,       spawn,          {.v = mycava } },
+    { MODKEY,                          XK_c,       spawn,          {.v = mycava } },\
 
+     // Varitey 🤤
+    {0|ControlMask,                    XK_t,       spawn,          SHCMD("variety -t")},
+    {0|ControlMask,                    XK_f,       spawn,          SHCMD("variety -f")},
+    {0|ControlMask,                    XK_p,       spawn,          SHCMD("variety -p")},
+    {0|ControlMask,                    XK_n,       spawn,          SHCMD("variety -n")},
      // toggle stuff
     { MODKEY,                          XK_f,       togglebar,      {0} },
     { MODKEY|ControlMask,              XK_t,       togglegaps,     {0} },
