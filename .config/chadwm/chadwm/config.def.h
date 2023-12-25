@@ -44,6 +44,7 @@ static const char *mydmenu[] = {"dmenu_run", "-nb", "#282a36", "-nf", "#f8f8f2",
 static const char *fonts[] = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19" };
 static const char *myfm[] = {"thunar", NULL};
 static const char *ss[] = {"flameshot", "gui", NULL};
+static const char *ssfull[] = {"flameshot", "full", NULL};
 static const char *mycava[] = {"kitty", "-e", "cava", NULL};
 // theme
 #include "themes/dracula.h"
@@ -137,7 +138,8 @@ static const Key keys[] = {
 	{0,                           XF86XK_AudioRaiseVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+")},
  
     // screenshot 
-       {0,                            XK_Print,    spawn,          {.v = ss}},
+        {0,                            XK_Print,    spawn,          {.v = ssfull}},
+        {MODKEY,                       XK_Print,    spawn,          {.v = ss}},
  
   //Other keybindings
     { Mod1Mask,                       XK_p,        spawn,          {.v = myrofid}},
@@ -151,7 +153,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                XK_f,       spawn,          {.v = myfm}},
     { MODKEY,                          XK_e,       spawn,          {.v = myeditor}},
     { MODKEY,                          XK_d,       spawn,          {.v = mydmenu } },
-    { MODKEY,                          XK_c,       spawn,          {.v = mycava } },\
+    { MODKEY,                          XK_c,       spawn,          {.v = mycava } },
 
      // Varitey 🤤
     {0|ControlMask,                    XK_t,       spawn,          SHCMD("variety -t")},
