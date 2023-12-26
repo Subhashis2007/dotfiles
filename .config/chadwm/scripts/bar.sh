@@ -50,8 +50,23 @@ wlan() {
 }
 
 clock() {
-	printf "^c$black^ ^b$darkblue^ 󱑆 "
-	printf "^c$black^^b$blue^ $(date '+%H:%M')  "
+	printf "^c$black^ ^b$darkblue^  "
+        printf "^c$black^^b$blue^ $(date "+ %A %D") "
+        printf "^c$black^ ^b$darkblue^ 󱑆 "  
+        printf "^c$black^^b$blue^ $(date "+%H:%M")   "
+ 
+}
+
+
+ETHERNET_ICON=''
+
+ethernet()
+{
+    if [ -d /sys/class/net/eth? ]; then
+        if [ "$(cat /sys/class/net/eth?/carrier)" == "1" ]; then
+            echo "$ETHERNET_ICON"
+        fi
+    fi
 }
 
 while true; do
@@ -59,5 +74,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$updates $(battery) $(brightness) $(cpu) $(mem) $(wlan) $(clock)"
+  sleep 1 && xsetroot -name "$updates $(cpu) $(mem) $(wlan) $(ethernet) $(clock)"
 done
