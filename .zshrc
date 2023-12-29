@@ -35,6 +35,7 @@ alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | n
 alias vpacman="sudo vim /etc/pacman.conf"
 alias echaotic='sudo sed -i "s/#\[chaotic-aur\]/\[chaotic-aur\]/g" /etc/pacman.conf && sudo sed -i "s/\#Include = \/etc\/pacman.d\/chaotic-mirrorlist/Include = \/etc\/pacman.d\/chaotic-mirrorlist/g" /etc/pacman.conf'
 alias dchaotic='sudo sed -i "s/\[chaotic-aur\]/#\[chaotic-aur\]/g" /etc/pacman.conf && sudo sed -i "s/\Include = \/etc\/pacman.d\/chaotic-mirrorlist/#Include = \/etc\/pacman.d\/chaotic-mirrorlist/g" /etc/pacman.conf'
+alias ff='fastfetch'
 #-------------YT----------------#
 alias yta-aac="yt-dlp --extract-audio --audio-format aac "
 alias yta-best="yt-dlp --extract-audio --audio-format best "
@@ -48,12 +49,13 @@ alias ytv-best="yt-dlp -f bestvideo+bestaudio "
 alias ytv='yt-dlp --merge-output-format mp4 -f "bestvideo+bestaudio/best"'
 alias yta="yt-dlp -x --audio-format best --audio-quality 0 --embed-thumbnail --no-playlist"
 alias ytap="yt-dlp -x --audio-format best --audio-quality 0 --embed-thumbnail"
-alias chadwm="startx ~/.config/chadwm/scripts/run.sh"
-
 #-----------bare-git-repo-------#
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias gcp="git cherry-pick"
-
+#--------------Misc-------------#
+alias chadwm="startx ~/.config/chadwm/scripts/run.sh"
+alias fixadb="sudo adb kill-server && sudo adb start-server" 
+alias die="sudo shutdown now"
 #----------Prompt--------------#
 # colorscript -r
 fastfetch
