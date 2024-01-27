@@ -157,11 +157,6 @@ static const Key keys[] = {
     { MODKEY,                          XK_d,       spawn,          {.v = mydmenu } },
     { MODKEY,                          XK_c,       spawn,          {.v = mycava } },
 
-     // Varitey 🤤
-    {0|ControlMask,                    XK_t,       spawn,          SHCMD("variety -t")},
-    {0|ControlMask,                    XK_f,       spawn,          SHCMD("variety -f")},
-    {0|ControlMask,                    XK_p,       spawn,          SHCMD("variety -p")},
-    {0|ControlMask,                    XK_n,       spawn,          SHCMD("variety -n")},
      // toggle stuff
     { MODKEY,                          XK_f,       togglebar,      {0} },
     { MODKEY|ControlMask,              XK_t,       togglegaps,     {0} },
