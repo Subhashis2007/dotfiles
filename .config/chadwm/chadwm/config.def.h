@@ -39,6 +39,9 @@ static const char *myrofie[] = {"rofi", "-show", "emoji", NULL};
 static const char *myrofiw[] = {"bash", "/home/subhashis/.config/rofi/scripts/rofi-wifi-menu", NULL};
 static const char *myrofib[] = {"bash", "/home/subhashis/.config/rofi/scripts/rofi-bluetooth", NULL};
 static const char *myrofip[] = {"bash", "/home/subhashis/.config/rofi/scripts/powermenu", NULL};
+static const char *mute[] = {"bash", "/home/subhashis/.config/scripts/volume.sh", "--mute-only", NULL};
+static const char *incv[] = {"bash", "/home/subhashis/.config/scripts/volume.sh", "--increase-volume", NULL};
+static const char *decv[] = {"bash", "/home/subhashis/.config/scripts/volume.sh", "--decrease-volume", NULL};
 static const char *mybrowser[] = {"thorium-browser", NULL};
 static const char *mydmenu[] = {"dmenu_run", "-nb", "#282a36", "-nf", "#f8f8f2", "-sb", "#bd93f9", "-sf", "#f8f8f2", "-fn", "Monospace:size=10", "-p", "Run:", NULL};
 static const char *fonts[] = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19" };
@@ -134,10 +137,10 @@ static const Layout layouts[] = {
 static const Key keys[] = {
     /* modifier                         key         function        argument */
 
-    // audio 
-        {0,                           XF86XK_AudioLowerVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-")},
-	{0,                           XF86XK_AudioMute,         spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")},
-	{0,                           XF86XK_AudioRaiseVolume,  spawn, SHCMD("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+")},
+	// audio 
+	{0,                           XF86XK_AudioLowerVolume,  spawn, {.v = decv}},
+	{0,                           XF86XK_AudioMute,         spawn, {.v = mute}},
+	{0,                           XF86XK_AudioRaiseVolume,  spawn, {.v = incv}},
  
     // screenshot 
         {0,                            XK_Print,    spawn,          {.v = ssfull}},
