@@ -8,6 +8,6 @@ nm-applet &
 run "numlockx on"
 run "bash ~/.config/chadwm/scripts/settheme"
 run "bash ~/.config/chadwm/scripts/startup"
-run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+run "/usr/bin/lxpolkit"
 dash ~/.config/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
