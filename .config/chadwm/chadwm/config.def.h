@@ -39,7 +39,7 @@ static const char *myrofie[] = {"rofi", "-show", "emoji", NULL};
 static const char *myrofiw[] = {"bash", "/home/subhashis/.config/rofi/scripts/rofi-wifi-menu", NULL};
 static const char *myrofib[] = {"bash", "/home/subhashis/.config/rofi/scripts/rofi-bluetooth", NULL};
 static const char *myrofip[] = {"bash", "/home/subhashis/.config/rofi/scripts/powermenu", NULL};
-static const char *mybrowser[] = {"firefox", NULL};
+static const char *mybrowser[] = {"thorium-browser", NULL};
 static const char *mydmenu[] = {"dmenu_run", "-nb", "#282a36", "-nf", "#f8f8f2", "-sb", "#bd93f9", "-sf", "#f8f8f2", "-fn", "Monospace:size=10", "-p", "Run:", NULL};
 static const char *fonts[] = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19" };
 static const char *myfm[] = {"thunar", NULL};
