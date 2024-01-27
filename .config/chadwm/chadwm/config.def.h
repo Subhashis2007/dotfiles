@@ -47,7 +47,7 @@ static const char *ss[] = {"flameshot", "gui", NULL};
 static const char *ssfull[] = {"flameshot", "full", NULL};
 static const char *mycava[] = {"kitty", "-e", "cava", NULL};
 // theme
-#include "themes/dracula.h"
+#include "themes/tokyonight.h"
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */

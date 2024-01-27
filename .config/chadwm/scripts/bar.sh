@@ -6,7 +6,7 @@
 interval=0
 
 # load colors
-. ~/.config/chadwm/scripts/bar_themes/dracula
+. ~/.config/chadwm/scripts/bar_themes/tokyonight
 
 cpu() {
   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
