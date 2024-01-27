@@ -32,17 +32,6 @@ use {
 
 }
 
-
-use {
-	'nvimdev/dashboard-nvim',
-	event = 'VimEnter',
-	config = function()
-		require('dashboard').setup {
-		}
-	end,
-	requires = {'nvim-tree/nvim-web-devicons'}
-}
-
 use({'glepnir/dbsession.nvim', cmd = { 'SessionSave', 'SessionDelete', 'SessionLoad'},
 config = function() require('dbsession').setup({}) end
 })
@@ -59,5 +48,11 @@ use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = fun
 use('barrett-ruth/live-server.nvim')
 use 'MunifTanjim/prettier.nvim'
 use("nvim-tree/nvim-tree.lua")
-
+use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+}
 end)
