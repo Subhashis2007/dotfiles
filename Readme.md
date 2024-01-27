@@ -12,7 +12,7 @@ mtpfs lxsession pavucontrol flameshot network-manager-applet volumeicon
 
 ## User Packages
 ```
-thorium-browser-bin neovim mpv
+thorium-browser-bin neovim mpv viewnior
 ```
 ---
 
