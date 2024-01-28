@@ -24,4 +24,4 @@ bash -c "$(curl -sL https://raw.githubusercontent.com/Subhashis2007/dotfiles/Cha
 ```
 
 ## Sceenshot
-![imgur](https://i.imgur.com/mvf9yDg.png)
+![imgur](https://i.imgur.com/aCrIXFg.png)
