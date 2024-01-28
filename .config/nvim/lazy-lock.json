@@ -4,11 +4,11 @@
   "lazy.nvim": { "branch": "main", "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609" },
   "live-server.nvim": { "branch": "main", "commit": "acc8890b46057599e5427a911c63d0c6ba6559e8" },
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
+  "nvim-colorizer.lua": { "branch": "master", "commit": "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6" },
   "nvim-tree.lua": { "branch": "master", "commit": "f1b3e6a7eb92da492bd693257367d9256839ed3d" },
   "nvim-treesitter": { "branch": "master", "commit": "b4138891b3454beeb14eef171c91c92377fcd715" },
   "nvim-web-devicons": { "branch": "master", "commit": "b427ac5f9dff494f839e81441fb3f04a58cbcfbc" },
   "plenary.nvim": { "branch": "master", "commit": "663246936325062427597964d81d30eaa42ab1e4" },
   "telescope.nvim": { "branch": "master", "commit": "2f3857c25bbd00ed7ac593c9d4071906369e4d20" },
-  "tokyonight.nvim": { "branch": "main", "commit": "e3301873c1e96903daebb98cc9b5926810bf73dd" },
-  "winresizer": { "branch": "master", "commit": "9bd559a03ccec98a458e60c705547119eb5350f3" }
+  "tokyonight.nvim": { "branch": "main", "commit": "e3301873c1e96903daebb98cc9b5926810bf73dd" }
 }
