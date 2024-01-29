@@ -42,7 +42,7 @@ static const char *myrofip[] = {"bash", "/home/subhashis/.config/rofi/scripts/po
 static const char *mute[] = {"bash", "/home/subhashis/.config/scripts/volume.sh", "--mute-only", NULL};
 static const char *incv[] = {"bash", "/home/subhashis/.config/scripts/volume.sh", "--increase-volume", NULL};
 static const char *decv[] = {"bash", "/home/subhashis/.config/scripts/volume.sh", "--decrease-volume", NULL};
-static const char *mybrowser[] = {"thorium-browser", NULL};
+static const char *mybrowser[] = {"firefox", NULL};
 static const char *mydmenu[] = {"dmenu_run", "-nb", "#282a36", "-nf", "#f8f8f2", "-sb", "#bd93f9", "-sf", "#f8f8f2", "-fn", "Monospace:size=10", "-p", "Run:", NULL};
 static const char *fonts[] = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19" };
 static const char *myfm[] = {"thunar", NULL};
@@ -50,7 +50,7 @@ static const char *ss[] = {"flameshot", "gui", NULL};
 static const char *ssfull[] = {"flameshot", "full", NULL};
 static const char *mycava[] = {"kitty", "-e", "cava", NULL};
 // theme
-#include "themes/doom-one.h"
+#include "themes/catppuccin.h"
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */

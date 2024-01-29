@@ -1,18 +1,15 @@
-configuration{
-    modi: "run,drun,window,emoji";
-    lines: 5;
-    font: "JetBrainsMono NF Medium:style=Medium,Regular 12";
-    show-icons: true;
-    icon-theme: "Tela dracula dark";
-    terminal: "st";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-}
+* {
+    bg-col:  #24273a;
+    bg-col-light: #24273a;
+    border-col: #24273a;
+    selected-col: #2e3440;
+    blue: #8aadf4;
+    fg-col: #cad3f5;
+    fg-col2: #ed8796;
+    grey: #6e738d;
 
-@theme "catppuccin-macchiato"
+    width: 600;
+}
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -62,6 +59,7 @@ listview {
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
     columns: 2;
+    lines: 5;
     background-color: @bg-col;
 }
 
@@ -95,4 +93,18 @@ button {
 button selected {
   background-color: @bg-col;
   text-color: @blue;
+}
+
+message {
+    background-color: @bg-col-light;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
 }
