@@ -6,7 +6,7 @@
 interval=0
 
 # load colors
-. ~/.config/chadwm/scripts/bar_themes/tokyonight
+. ~/.config/chadwm/scripts/bar_themes/doom-one
 
 cpu() {
   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
