@@ -32,6 +32,11 @@ battery() {
   printf "^c$blue^   $get_capacity"
 }
 
+get_vol() {
+  vol=" $(pactl list sinks | awk '/Volume:/ {print $5}' | head -n 1 | tr -d '%')%"
+  printf "^c$black^ ^b$blue^ 󰕾 ^d^%s" " ^c$blue^$vol"
+}
+
 brightness() {
   printf "^c$red^   "
   printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
@@ -74,5 +79,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$updates $(cpu) $(mem) $(wlan) $(ethernet) $(clock)"
+  sleep 1 && xsetroot -name "$updates  $(cpu) $(mem) $(wlan) $(get_vol) $(clock)"
 done
