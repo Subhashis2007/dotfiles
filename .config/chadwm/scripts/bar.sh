@@ -48,11 +48,11 @@ get_vol() {
 		echo " muted"
 	else
 		if [ "$vol" -ge 65 ]; then
-			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol"
+			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol%"
 		elif [ "$vol" -ge 40 ]; then
-			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol"
+			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol%"
 		elif [ "$vol" -ge 0 ]; then
-			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol"
+			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol%"
 		fi
 	fi
 }
