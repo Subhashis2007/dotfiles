@@ -33,8 +33,28 @@ battery() {
 }
 
 get_vol() {
-  vol=" $(pactl list sinks | awk '/Volume:/ {print $5}' | head -n 1 | tr -d '%')%"
-  printf "^c$black^ ^b$blue^ 󰕾 ^d^%s" " ^c$blue^$vol"
+
+	mono=$(amixer -M sget Master | grep Mono: | awk '{ print $2 }')
+
+	if [ -z "$mono" ]; then
+		muted=$(amixer -M sget Master | awk 'FNR == 6 { print $7 }' | sed 's/[][]//g')
+		vol=$(amixer -M sget Master | awk 'FNR == 6 { print $5 }' | sed 's/[][]//g; s/%//g')
+	else
+		muted=$(amixer -M sget Master | awk 'FNR == 5 { print $6 }' | sed 's/[][]//g')
+		vol=$(amixer -M sget Master | awk 'FNR == 5 { print $4 }' | sed 's/[][]//g; s/%//g')
+	fi
+
+	if [ "$muted" = "off" ]; then
+		echo " muted"
+	else
+		if [ "$vol" -ge 65 ]; then
+			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol"
+		elif [ "$vol" -ge 40 ]; then
+			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol"
+		elif [ "$vol" -ge 0 ]; then
+			printf "^c$black^ ^b$blue^  ^d^%s" " ^c$blue^$vol"
+		fi
+	fi
 }
 
 brightness() {
