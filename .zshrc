@@ -57,9 +57,9 @@ alias chadwm="startx ~/.config/chadwm/scripts/run.sh"
 alias fixadb="sudo adb kill-server && sudo adb start-server" 
 alias die="sudo shutdown now"
 #----------Prompt--------------#
-# colorscript -r
-fastfetch
+fastfetch --pipe false | lolcat
 eval "$(starship init zsh)"
+
 
 
 
