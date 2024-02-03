@@ -23,5 +23,7 @@ Install all the dependencies, and then install the dotfiles as a bare git reposi
 bash -c "$(curl -sL https://raw.githubusercontent.com/Subhashis2007/dotfiles/Chadwm/.config/scripts/dots.sh)"
 ```
 
-## Sceenshot
-![imgur](https://i.imgur.com/aCrIXFg.png)
+## Sceenshots
+![imgur](https://i.imgur.com/rUnY6US.png)
+
+![imgur](https://i.imgur.com/YSfOaWk.png)
