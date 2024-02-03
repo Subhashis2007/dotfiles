@@ -141,9 +141,6 @@ return {
 					[[██  ██ ██ ██      ██    ██  ██  ██  ██ ██  ██  ██ ]],
 					[[██   ████ ███████  ██████    ████   ██ ██      ██ ]],
 					[[                                                  ]],  
-					[[                                                  ]],  
-					[[                                                  ]],  
-					[[                                                  ]],  
 				},
 				opts = {
 					position = "center",
@@ -180,12 +177,12 @@ return {
 				val = {
 					{ type = "text",    val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
 					{ type = "padding", val = 1 },
-					dashboard.button("SPC f n  ",   "  New file", "<cmd>ene<CR>"),
-					dashboard.button("SPC f f  ", "󰈞  Find file"),
-					dashboard.button("SPC f g  ", "󰊄  Live grep"),
-					dashboard.button("SPC f c  ", "  Configuration", "<cmd>cd ~/.config/nvim/ <CR>"),
-					dashboard.button("SPC h r r", "  Update plugins", "<cmd>Lazy sync<CR>"),
-					dashboard.button("q", "󰅚  Quit", "<cmd>qa<CR>"),
+					dashboard.button("SPC f n", "  New file", "<cmd>ene<CR>"),
+					dashboard.button("SPC f f", "󰈞  Find file"),
+					dashboard.button("SPC f g", "󰊄  Live grep"),
+					dashboard.button("SPC f c", "  Configuration", "<cmd>cd ~/.config/nvim/ <CR>"),
+					dashboard.button("SPC u p", "  Update plugins", "<cmd>Lazy sync<CR>"),
+					dashboard.button("SPC q q", "󰅚  Quit", "<cmd>qa<CR>"),
 				},
 				position = "center",
 			}
