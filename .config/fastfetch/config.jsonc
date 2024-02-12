@@ -1,0 +1,39 @@
+{
+    "$schema": "file:///C:/msys64/home/zhang/fastfetch/doc/json_schema.json",
+    "logo": {
+        "type": "small"
+    },
+    "display": {
+        "separator": "\u001b[31m->   "
+    },
+    "modules": [
+ {
+    "key": "󰣇       ",
+            "type": "os"
+ },
+ 
+"break",
+        
+{
+    "key": "       ",
+    "type": "shell"
+   
+ },
+
+"break",
+        
+{
+    "key": "       ",
+    "type": "terminal"
+
+},
+
+"break",
+{
+    "key": "󰏖       ",
+    "type": "packages"
+},
+        "break",
+         
+]
+}

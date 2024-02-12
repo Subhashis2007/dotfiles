@@ -1,0 +1,7 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "JetBrainsMono Nerd Font Medium 11";
+ combi-modi: "window,drun,ssh";
+ }
+
+@theme "SmoothC"

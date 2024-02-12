@@ -1,0 +1,101 @@
+/************************************************
+ * ROFI Color theme based on Catppuccin Colors
+ * AUTHOR: Subhashis Barad
+ ***********************************************/
+
+* {
+    
+    background:                  #24273a;
+    foreground:                  #cad3f5;
+    selected-normal-foreground:  #b8c0e0;
+    selected-normal-background:  #5b6078;
+    alternate-normal-background: #181926;
+    alternate-normal-foreground: #ed8796;    
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    border-color:                #24273a;
+    spacing:                     2;
+    separatorcolor:              #6e738d;
+    background-color: @background;
+}
+window {
+    background-color: @background;
+    border:           1;
+    padding:          5;
+    width: 700px;
+    height: 350px;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+textbox {
+    text-color: @foreground;
+}
+listview {
+    fixed-height: 0;
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element-text {
+    background-color: inherit;
+    text-color:       @selected-normal-foreground;
+}
+element-icon {
+    background-color: inherit;
+}
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-color: @normal-foreground;
+    handle-width: 8px ;
+    padding:      0;
+}
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    spacing: 10px;
+    text-color: @normal-foreground;
+    padding:    5px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+entry {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
+}
+
